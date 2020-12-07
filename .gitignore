@@ -1,3 +1,6 @@
 venv/
 cgc_website/cgc_website/__pycache__/
 cgc_website/db.sqlite3
+cgc_website/.idea/
+cgc_website/landing_page/__pycache__/
+cgc_website/landing_page/migrations/__pycache__/
