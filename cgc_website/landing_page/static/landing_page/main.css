@@ -3,22 +3,21 @@
 .navbar-flex-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     border: 1px black solid;
     background: white;
     align-items: center;
 
-    padding-top: 39px;
-    padding-bottom: 32px;
+    padding: 39px 140px 32px 140px;
 }
 
 .navbar-logo-flex-container {
     border: 1px black solid;
     background: white;
     display: flex;
-    flex-basis: auto;
-    justify-content: flex-end;
+    /*flex-basis: auto;*/
+    justify-content: left;
 }
 .navbar-menu-flex-container {
     border: 1px black solid;
@@ -26,7 +25,7 @@
     display: flex;
     flex-flow: wrap;
     flex-basis: auto;
-    justify-content: center;
+    justify-content: right;
     align-items: flex-end;
     padding-top: 10px;
 }
@@ -34,18 +33,19 @@
 .navbar-logo-flex-item {
     flex-shrink: 1;
     width: 300px;
-    margin-left: 22px;
-    margin-right: 22px;
 }
 
 .navbar-button-flex-item {
     text-align: center;
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 25px;
-    margin-left: 22px;
-    margin-right: 22px;
+
 
     cursor: pointer;
+}
+.navbar-button-middle {
+    margin-left: 22px;
+    margin-right: 22px;
 }
 
 /* --- Menu buttons --- */
@@ -71,6 +71,10 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
     min-height: 900px;
     background: transparent;
 }
+.parallax-window-narrow {
+    min-height: 300px;
+    background: transparent;
+}
 
 /* --- Black box --- */
 .black-flex-container {
@@ -78,20 +82,19 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+
     max-width: 764px;
-    padding: 100px 100px 100px 100px;
+    padding: 100px 0 100px 140px;
     min-height: 560px;
 
     background: rgba(0, 0, 0, 0.7);
     border: 1px white solid;
     position: relative;
     top: 171px;
-    left: 0;
 }
 .black-flex-item {
     border: 1px white solid;
-    /*margin: 15px 0 15px 0;*/
-    max-width: 570px;
+    max-width: 530px;
 }
 
 /* --- Text --- */
@@ -104,15 +107,42 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
 p.text-plain {
     text-align: left;
     font-family: "Source Serif Pro", "Arial", serif;
-    font-size: 25px;
+    font-size: 23px;
     color: black;
     line-height: 31px;
 }
+p.text-plain-white {
+    font-size: 25px;
+    color: white;
+}
+
+
 h1 {
     font-size: 50px;
+    font-weight: bold;
 }
 h2 {
     font-size: 38px;
+    font-weight: bold;
+
+    margin-left: 140px;
+    margin-bottom: 35px;
+
+}
+h3 {
+    font-size: 32px;
+    font-family: "Source Serif Pro", "Arial", serif;
+    color: black;
+    line-height: 40px;
+
+    margin-left: 140px;
+    margin-bottom: 35px;
+}
+h4 {
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-bottom: 30px;
 }
 
 /* --- Text colors --- */
@@ -149,3 +179,37 @@ a.menu-button-gold:hover, a.menu-button-gold:active {
 }
 
 
+/* --- Services Layout --- */
+div.average-flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    border: 1px black solid;
+    background: white;
+    align-items: center;
+
+    padding: 0 140px 75px 140px;
+}
+
+.services-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: left;
+
+    border: 1px black solid;
+    max-width: 423px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+/* --- Lines --- */
+hr.gold {
+    height:2px;
+    border-width: 5px;
+    color: #C99C54;
+    background-color: #C99C54;
+    width: 270px;
+    margin: 0 0 16px 0;
+}
