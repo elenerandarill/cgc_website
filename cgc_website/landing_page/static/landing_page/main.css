@@ -1,0 +1,83 @@
+.navbar_flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+
+    /* Then we define the flow direction
+     and if we allow the items to wrap
+    * Remember this is the same as:
+    * flex-direction: row;
+    * flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+    /*flex-basis: 100%;*/
+
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+
+    background: white;
+    border: 1px black solid;
+    /*list-style: none;*/
+    /*height: 122px;*/
+    align-items: center;
+
+    padding-top: 39px;
+    padding-bottom: 32px;
+}
+
+.navbar_logo_flex-container {
+    background: white;
+    border: 1px black solid;
+    display: flex;
+    /*flex-flow: wrap;*/
+    flex-basis: auto;
+    justify-content: flex-end;
+}
+.navbar_menu_flex-container {
+    background: white;
+    border: 1px black solid;
+    display: flex;
+    flex-flow: wrap;
+    flex-basis: auto;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+
+.navbar_logo_flex-item {
+    flex-shrink: 1;
+    /*margin-left: 140px;*/
+    width: 300px;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.navbar_button_flex-item {
+    text-align: center;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 25px;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+a.menu-button:link, a.menu-button:visited {
+    color: black;
+    text-decoration: none;
+}
+a.menu-button:hover, a.menu-button:active {
+    color: #156E7A;
+    text-decoration: none;
+}
+a.menu-button-kontakt:link, a.menu-button-kontakt:visited {
+    color: #C99C54;
+    text-decoration: none;
+}
+a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
+    color: #156E7A;
+    text-decoration: none;
+}
+
+
+
+div.wide_photo {
+
+}
