@@ -1,3 +1,6 @@
+body {
+    background: #FCFCFC;
+}
 
 /* --- Navigation bar with logo --- */
 .navbar-flex-container {
@@ -6,7 +9,6 @@
     justify-content: space-between;
 
     border: 1px black solid;
-    background: white;
     align-items: center;
 
     padding: 39px 140px 32px 140px;
@@ -14,14 +16,12 @@
 
 .navbar-logo-flex-container {
     border: 1px black solid;
-    background: white;
     display: flex;
     /*flex-basis: auto;*/
     justify-content: left;
 }
 .navbar-menu-flex-container {
-    border: 1px black solid;
-    background: white;
+    border: 1px black solid;;
     display: flex;
     flex-flow: wrap;
     flex-basis: auto;
@@ -104,6 +104,7 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
     color: black;
     line-height: 67px;
 }
+
 p.text-plain {
     text-align: left;
     font-family: "Source Serif Pro", "Arial", serif;
@@ -127,7 +128,6 @@ h2 {
 
     margin-left: 140px;
     margin-bottom: 35px;
-
 }
 h3 {
     font-size: 32px;
@@ -146,28 +146,42 @@ h4 {
     margin-bottom: 30px;
 }
 
-/* --- Text colors --- */
-.text-gold {
+
+/* --- Colors --- */
+.color-gold {
     color: #C99C54;;
 }
-.text-white {
+.color-white {
     color: white;
 }
-.text-grey-light {
+.color-gray-light {
     color: #BFBFBF;
 }
+.color-gray {
+    color: #97999B;
+}
+.color-gray-darker {
+    color: #8C8C8C;
+}
+
 
 /* --- Gold button --- */
 .button-gold {
     text-align: center;
+    padding: 6px 27px 11px;
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 25px;
-    background: #C99C54;
-    /*box-shadow: 0px 3px 6px #00000029;*/
-    border-radius: 10px;
-    padding: 6px 27px 11px;
-    cursor: pointer;
     color: white;
+
+    background: #C99C54;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button-gold-flex-containter {
+    border: 1px black solid;
+    text-align: center;
+    height: 260px;
+    padding-top: 101px;
 }
 
 a.menu-button-gold:link, a.menu-button-gold:visited {
@@ -179,7 +193,6 @@ a.menu-button-gold:hover, a.menu-button-gold:active {
     text-decoration: none;
 }
 
-
 /* --- Services Layout --- */
 div.average-flex-container {
     display: flex;
@@ -187,7 +200,6 @@ div.average-flex-container {
     justify-content: space-between;
 
     border: 1px black solid;
-    background: white;
     align-items: flex-start;
 
     padding: 0 140px 75px 140px;
@@ -225,12 +237,151 @@ div.average-flex-container {
     margin: 0 0 30px 0;
 }
 
-/* --- Lines --- */
-hr.gold {
-    height:2px;
-    border-width: 5px;
-    color: #C99C54;
+/* --- Lines and Lists --- */
+.gold-4px {
+    height: 4px;
+    /*border-width: 5px;*/
+    /*color: #C99C54;*/
     background-color: #C99C54;
     width: 270px;
     margin: 0 0 16px 0;
 }
+.gold-2px {
+    height: 2px;
+    background-color: #C99C54;
+    width: 200px;
+}
+ul {
+    lighting-color: #C99C54;
+}
+
+/* --- Arrow Story Layout --- */
+.arrow-story-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    min-width: 1055px;
+    border: 1px black solid;
+    padding: 0 140px 75px 140px;
+}
+.arrow-story-item {
+    border: 1px black solid;
+    min-width: 150px;
+    justify-content: left;
+}
+.arrow-story-item-first {
+    width: 158px;
+}
+.arrow-story-item-second {
+    width: 178px;
+}
+.arrow-story-item-third {
+    width: 397px;
+}
+.arrow-story-line {
+    border: 1px black solid;
+    flex-grow: 1;
+    min-width: 5px;
+}
+.arrow-story-line-first {
+    border: 1px black solid;
+    flex-grow: 1;
+    min-width: 20px;
+    max-width: 100px;
+}
+
+/* --- Light Gray Title --- */
+
+.light-flex-container {
+    height: 189px;
+    background: #F6F6F6;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    padding: 0 140px 0 140px;
+    flex-basis: auto;
+}
+.text-flex-item-left {
+    text-align: right;
+    padding-top: 27px;
+    line-height: 51px;
+}
+/* --- Team ---*/
+.team-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    border: 1px black solid;
+    max-width: 428px;
+    margin-top: 100px;
+    /*margin-bottom: 35px;*/
+}
+h4.team {
+    text-align: center;
+    font-size: 25px;
+    line-height: 33px;
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+h4.team-gold {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Source Serif Pro", "Arial", serif;
+    font-weight: normal;
+    color: #C99C54;
+    line-height: 31px;
+
+    margin-top: 6px;
+    margin-bottom: 26px;
+}
+p.team {
+    color: #8C8C8C;
+    text-align: center;
+    font-family: "Source Serif Pro", "Arial", serif;
+    font-size: 23px;
+    line-height: 29px;
+    padding: 0 10px 0 10px;
+}
+.team-img {
+    display: block;
+    align-items: center;
+    margin: 10px auto 0 auto;
+}
+
+/* --- Clients Logos --- */
+.clients-logos-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 1px black solid;
+    padding: 50px 140px 75px 140px;
+    min-height: 634px;
+}
+.client-logo-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px;
+    margin: 15px;
+
+    border: 1px blue solid;
+}
+
+.logo-client-img {
+    max-width: 100%;
+    max-height: 90px;
+    border: 1px black solid;
+
+    filter:grayscale(100%);
+}
+img.logo-client-img:hover {
+    filter:grayscale(0%);
+}
+
+
