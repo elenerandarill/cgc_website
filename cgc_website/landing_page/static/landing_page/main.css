@@ -8,26 +8,25 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
 
-    border: 1px black solid;
+    /*border: 1px black solid;*/
     align-items: center;
-
     padding: 39px 140px 32px 140px;
 }
 
 .navbar-logo-flex-container {
-    border: 1px black solid;
     display: flex;
-    /*flex-basis: auto;*/
     justify-content: left;
+    /*border: 1px black solid;*/
 }
 .navbar-menu-flex-container {
-    border: 1px black solid;;
     display: flex;
     flex-flow: wrap;
     flex-basis: auto;
     justify-content: right;
+
     align-items: flex-end;
     padding-top: 10px;
+    /*border: 1px black solid;*/
 }
 
 .navbar-logo-flex-item {
@@ -36,10 +35,9 @@ body {
 }
 
 .navbar-button-flex-item {
-    text-align: center;
     font-family: "Segoe UI", "Arial", sans-serif;
+    text-align: center;
     font-size: 25px;
-
 
     cursor: pointer;
 }
@@ -83,46 +81,48 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
     justify-content: space-evenly;
     align-items: flex-start;
 
-    max-width: 764px;
     padding: 100px 0 100px 140px;
     min-height: 560px;
+    max-width: 764px;
 
     background: rgba(0, 0, 0, 0.7);
-    border: 1px white solid;
     position: relative;
     top: 171px;
+    /*border: 1px white solid;*/
 }
 .black-flex-item {
-    border: 1px white solid;
     max-width: 530px;
+    /*border: 1px white solid;*/
 }
 
 /* --- Text --- */
 .text-title {
-    text-align: left;
     font-family: "Segoe UI, Bold", "Arial", sans-serif;
+    text-align: left;
     color: black;
     line-height: 67px;
 }
 
 p.text-plain {
-    text-align: left;
     font-family: "Source Serif Pro", "Arial", serif;
     font-size: 23px;
-    color: black;
     line-height: 31px;
+    text-align: left;
+    color: black;
 }
 p.text-plain-white {
     font-size: 25px;
     color: white;
 }
 
-
+/* --- Headers --- */
 h1 {
+    font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 50px;
     font-weight: bold;
 }
 h2 {
+    font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 38px;
     font-weight: bold;
 
@@ -130,16 +130,17 @@ h2 {
     margin-bottom: 35px;
 }
 h3 {
-    font-size: 32px;
     font-family: "Source Serif Pro", "Arial", serif;
-    color: black;
+    font-size: 32px;
     line-height: 40px;
+    color: black;
 
     margin-top: 100px;
     margin-left: 140px;
     margin-bottom: 35px;
 }
 h4 {
+    font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 25px;
     font-weight: bold;
 
@@ -167,21 +168,22 @@ h4 {
 
 /* --- Gold button --- */
 .button-gold {
-    text-align: center;
-    padding: 6px 27px 11px;
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 25px;
-    color: white;
+    text-align: center;
 
-    background: #C99C54;
+    padding: 6px 27px 11px;
     border-radius: 10px;
+    color: white;
+    background: #C99C54;
+
     cursor: pointer;
 }
 .button-gold-flex-containter {
-    border: 1px black solid;
     text-align: center;
     height: 260px;
     padding-top: 101px;
+    /*border: 1px black solid;*/
 }
 
 a.menu-button-gold:link, a.menu-button-gold:visited {
@@ -198,11 +200,10 @@ div.average-flex-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
-    border: 1px black solid;
     align-items: flex-start;
 
     padding: 0 140px 75px 140px;
+    /*border: 1px black solid;*/
 }
 
 .services-item {
@@ -210,15 +211,16 @@ div.average-flex-container {
     flex-flow: column wrap;
     justify-content: left;
 
-    border: 1px black solid;
     max-width: 423px;
     margin-top: 35px;
     margin-bottom: 35px;
     padding-right: 10px;
+
+    /*border: 1px black solid;*/
 }
 .services-item-long {
-    border: 1px black solid;
     max-width: 950px;
+    /*border: 1px black solid;*/
 }
 
 
@@ -227,32 +229,34 @@ div.average-flex-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-
     max-width: 475px;
-    border: 1px black solid;
+    /*border: 1px black solid;*/
 }
 .actions-side-item {
-    border: 1px black solid;
     max-width: 375px;
     margin: 0 0 30px 0;
+    /*border: 1px black solid;*/
 }
 
 /* --- Lines and Lists --- */
 .gold-4px {
     height: 4px;
-    /*border-width: 5px;*/
-    /*color: #C99C54;*/
-    background-color: #C99C54;
     width: 270px;
+    background-color: #C99C54;
     margin: 0 0 16px 0;
 }
 .gold-2px {
     height: 2px;
-    background-color: #C99C54;
     width: 200px;
+    background-color: #C99C54;
 }
 ul {
     lighting-color: #C99C54;
+}
+.gold-long {
+    height: 2px;
+    background-color: #C99C54;
+    margin: 0;
 }
 
 /* --- Arrow Story Layout --- */
@@ -263,13 +267,13 @@ ul {
     align-items: flex-start;
 
     min-width: 1055px;
-    border: 1px black solid;
     padding: 0 140px 75px 140px;
+    /*border: 1px black solid;*/
 }
 .arrow-story-item {
-    border: 1px black solid;
     min-width: 150px;
     justify-content: left;
+    /*border: 1px black solid;*/
 }
 .arrow-story-item-first {
     width: 158px;
@@ -281,32 +285,32 @@ ul {
     width: 397px;
 }
 .arrow-story-line {
-    border: 1px black solid;
     flex-grow: 1;
     min-width: 5px;
+    /*border: 1px black solid;*/
 }
 .arrow-story-line-first {
-    border: 1px black solid;
     flex-grow: 1;
     min-width: 20px;
     max-width: 100px;
+    /*border: 1px black solid;*/
 }
 
 /* --- Light Gray Title --- */
 
 .light-flex-container {
-    height: 189px;
-    background: #F6F6F6;
+    flex-basis: auto;
     align-items: flex-start;
     justify-content: flex-end;
 
+    height: 189px;
+    background: #F6F6F6;
     padding: 0 140px 0 140px;
-    flex-basis: auto;
 }
 .text-flex-item-left {
+    line-height: 51px;
     text-align: right;
     padding-top: 27px;
-    line-height: 51px;
 }
 /* --- Team ---*/
 .team-item {
@@ -314,12 +318,12 @@ ul {
     flex-flow: column wrap;
     justify-content: center;
 
-    border: 1px black solid;
     max-width: 428px;
     margin-top: 100px;
-    /*margin-bottom: 35px;*/
+    /*border: 1px black solid;*/
 }
 h4.team {
+    font-family: "Segoe UI", "Arial", sans-serif;
     text-align: center;
     font-size: 25px;
     line-height: 33px;
@@ -327,27 +331,26 @@ h4.team {
     margin-bottom: 0;
 }
 h4.team-gold {
+    font-family: "Source Serif Pro", "Arial", serif;
     text-align: center;
     font-size: 25px;
-    font-family: "Source Serif Pro", "Arial", serif;
     font-weight: normal;
-    color: #C99C54;
     line-height: 31px;
 
+    color: #C99C54;
     margin-top: 6px;
     margin-bottom: 26px;
 }
 p.team {
-    color: #8C8C8C;
-    text-align: center;
     font-family: "Source Serif Pro", "Arial", serif;
+    text-align: center;
     font-size: 23px;
     line-height: 29px;
+
+    color: #8C8C8C;
     padding: 0 10px 0 10px;
 }
 .team-img {
-    display: block;
-    align-items: center;
     margin: 10px auto 0 auto;
 }
 
@@ -358,30 +361,104 @@ p.team {
     justify-content: flex-start;
     align-items: center;
 
-    border: 1px black solid;
-    padding: 50px 140px 75px 140px;
     min-height: 634px;
+    padding: 50px 140px 75px 140px;
+    /*border: 1px black solid;*/
 }
 .client-logo-item{
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 100px;
     width: 250px;
     margin: 15px;
 
-    border: 1px blue solid;
+    /*border: 1px blue solid;*/
 }
 
 .logo-client-img {
     max-width: 100%;
     max-height: 90px;
-    border: 1px black solid;
 
     filter:grayscale(100%);
+    /*border: 1px black solid;*/
 }
 img.logo-client-img:hover {
     filter:grayscale(0%);
+}
+
+/* --- Contact Form --- */
+.contact-flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 66px 140px 102px 140px;
+
+    background: #F6F6F6;
+    /*min-height: 1034px;*/
+    /*border: 1px black solid;*/
+}
+.contact-flex-item {
+    border: 1px black solid;
+
+}
+
+/* --- Footer --- */
+.footer-flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+    background: #F6F6F6;
+
+    min-height: 358px;
+    padding: 42px 140px 66px 140px;
+
+    /*border: 1px black solid;*/
+}
+.footer-flex-item{
+    align-items: flex-start;
+    margin: 0 135px 0 0;
+    padding: 0;
+
+    /*border: 1px blue solid;*/
+}
+.contact-h2 {
+    font-family: "Source Serif Pro", "Arial", serif;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: black;
+    margin-bottom: 23px;
+}
+.contact-h3 {
+    font-family: "Source Serif Pro", "Arial", serif;
+    font-size: 23px;
+    line-height: 29px;
+
+    color: black;
+    margin-bottom: 26px;
+}
+.text-contact-map {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 22px;
+    line-height: 40px;
+
+    color: black;
+}
+.text-contact {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+
+    color: black;
+}
+.contact-icon {
+    width: 22px;
+    margin-right: 10px;
 }
 
 
