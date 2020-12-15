@@ -8,21 +8,22 @@ body {
     flex-flow: row wrap;
     justify-content: space-between;
 
-    /*border: 1px black solid;*/
     align-items: center;
     padding: 39px 140px 32px 140px;
+    /*border: 1px black solid;*/
 }
 
 .navbar-logo-flex-container {
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    flex-grow: 1;
     /*border: 1px black solid;*/
 }
 .navbar-menu-flex-container {
     display: flex;
     flex-flow: wrap;
-    flex-basis: auto;
-    justify-content: right;
+    flex-grow: 2;
+    justify-content: center;
 
     align-items: flex-end;
     padding-top: 10px;
@@ -176,6 +177,7 @@ h4 {
     border-radius: 10px;
     color: white;
     background: #C99C54;
+    box-shadow: 0 3px 6px #00000029;
 
     cursor: pointer;
 }
@@ -199,7 +201,7 @@ a.menu-button-gold:hover, a.menu-button-gold:active {
 div.average-flex-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
 
     padding: 0 140px 75px 140px;
@@ -207,14 +209,13 @@ div.average-flex-container {
 }
 
 .services-item {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: left;
+    /*display: flex;*/
+    /*flex-flow: column wrap;*/
+    /*flex-basis: auto;*/
 
     max-width: 423px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-    padding-right: 10px;
+    padding: 0 10px 0 10px;
+    margin: 35px auto;
 
     /*border: 1px black solid;*/
 }
@@ -254,7 +255,7 @@ ul {
     lighting-color: #C99C54;
 }
 .gold-long {
-    height: 2px;
+    height: 6px;
     background-color: #C99C54;
     margin: 0;
 }
@@ -303,14 +304,13 @@ ul {
     align-items: flex-start;
     justify-content: flex-end;
 
-    height: 189px;
+    /*min-height: 189px;*/
     background: #F6F6F6;
-    padding: 0 140px 0 140px;
+    padding: 27px 140px 5px 140px;
 }
-.text-flex-item-left {
+.text-flex-item-right {
     line-height: 51px;
     text-align: right;
-    padding-top: 27px;
 }
 /* --- Team ---*/
 .team-item {
@@ -358,8 +358,8 @@ p.team {
 .clients-logos-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
 
     min-height: 634px;
     padding: 50px 140px 75px 140px;
@@ -389,43 +389,126 @@ img.logo-client-img:hover {
 }
 
 /* --- Contact Form --- */
+
+.backgroud-light-grey {
+    display: flex;
+    flex-flow: column wrap;
+    background: #F6F6F6;
+    padding: 0;
+}
+
 .contact-flex-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-
-    padding: 66px 140px 102px 140px;
+    padding: 0 140px 100px 140px;
 
     background: #F6F6F6;
-    /*min-height: 1034px;*/
     /*border: 1px black solid;*/
 }
-.contact-flex-item {
-    border: 1px black solid;
+.contact-data-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    /*border: 1px black solid;*/
+}
+.form-flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    flex-grow: 1;
 
+    /*border: 1px black solid;*/
+}
+.form-label {
+    font-family: "Source Serif Pro", "Arial", serif;
+    font-size: 23px;
+    line-height: 29px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.form-field {
+    width: 100%;
+    height: 45px;
+    background: #FFFFFF;
+    border: 1px #156E7A solid;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.form-field-textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px #156E7A solid;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.form-send-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+.button-gold-form {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 25px;
+    text-align: center;
+
+    padding: 0 45px 0 45px;
+
+    margin-top: 41px;
+    border-radius: 10px;
+    color: white;
+    background: #C99C54;
+    box-shadow: 0 3px 6px #00000029;
+    border: 0;
+
+    cursor: pointer;
+}
+.form-data-text {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    min-width: 385px;
+    font-weight: normal;
+
+    color: black;
+}
+.form-data-icon {
+    width: 37px;
+    margin-right: 10px;
+}
+.data-p-margin-bottom {
+    margin-bottom: 40px;
 }
 
 /* --- Footer --- */
-.footer-flex-container {
+.footer-container {
+    background: #F6F6F6;
+    min-height: 358px;
+    padding: 42px 0 16px 0;
+
+    /*border: 1px red solid;*/
+}
+
+.footer-flex-data {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
+    justify-content: center;
 
-    background: #F6F6F6;
-
-    min-height: 358px;
-    padding: 42px 140px 66px 140px;
-
-    /*border: 1px black solid;*/
+    max-width: 780px;
+    /*border: 3px green solid;*/
 }
+
 .footer-flex-item{
-    align-items: flex-start;
-    margin: 0 135px 0 0;
-    padding: 0;
+    margin: 0 auto 30px auto;
+    padding: 0 15px 0 15px;
 
     /*border: 1px blue solid;*/
 }
+
+
 .contact-h2 {
     font-family: "Source Serif Pro", "Arial", serif;
     font-size: 32px;
@@ -446,6 +529,7 @@ img.logo-client-img:hover {
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 22px;
     line-height: 40px;
+    min-width: 162px;
 
     color: black;
 }
@@ -453,6 +537,7 @@ img.logo-client-img:hover {
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 22px;
     line-height: 30px;
+    min-width: 325px;
 
     color: black;
 }
@@ -460,5 +545,7 @@ img.logo-client-img:hover {
     width: 22px;
     margin-right: 10px;
 }
+
+
 
 

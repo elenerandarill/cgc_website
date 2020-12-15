@@ -23,19 +23,19 @@
 
       <body>
 
-            <header class="navbar-flex-container">
+            <header id="go_to_start" class="navbar-flex-container">
                 <!-- Navbar logo -->
                 <div class="navbar-logo-flex-container">
                     <div class="navbar-logo-flex-item"><img src="/media/logoCGC_long_color.svg" alt="logo CGC" style="width:299px;" /></div>
                 </div>
                 <!-- Navbar menu -->
                 <div class="navbar-menu-flex-container">
-                    <div class="navbar-button-flex-item"><a class="menu-button" href="#">START</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="#">USŁUGI</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="#">JAK DZIAŁAMY</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="#">TEAM</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="#">KLIENCI</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button-kontakt" href="#">KONTAKT</a></div>
+                    <div class="navbar-button-flex-item"><a class="menu-button" href="#go_to_start">START</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#go_to_uslugi">USŁUGI</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#go_to_jak_dzialamy">JAK DZIAŁAMY</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#go_to_team">TEAM</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#go_to_klienci">KLIENCI</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button-kontakt" href="{% url 'home' %}#go_to_kontakt">KONTAKT</a></div>
                     <div class="navbar-button-flex-item"><a class="menu-button" href="#">EN</a></div>
                 </div>
             </header>
@@ -55,19 +55,19 @@
                     </div>
 
                     <div class="black-flex-item">
-                        <a class="button-gold menu-button-gold">Sprawdź ofertę</a>
+                        <a href="#go_to_uslugi" class="button-gold menu-button-gold">Sprawdź ofertę</a>
                     </div>
                 </div>
 
             </div>
 
-            <a href="#">
+            <a href="#go_to_uslugi">
                 <img src="/media/v-sign.png" width="26px" style="display: block; align-items: center; margin: 10px auto 0 auto"/>
             </a>
 
 
             <!-- Services part -->
-            <h3><b class="color-gold">|</b> NASZE USŁUGI</h3>
+            <h3 id="go_to_uslugi"><b class="color-gold">|</b> NASZE USŁUGI</h3>
             <h2>Rozwiązania szyte na miarę<br /> dla Twojego biznesu</h2>
 
             <div class="average-flex-container">
@@ -84,7 +84,7 @@
                         incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
                 </div>
                 <div class="services-item">
-                     <hr class="gold">
+                     <hr class="gold-4px">
                     <h4>Outsourcing</h4>
                     <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
@@ -115,7 +115,7 @@
 
 
            <!-- Actions part -->
-            <h3><b class="color-gold">|</b> JAK DZIAŁAMY</h3>
+            <h3 id="go_to_jak_dzialamy"><b class="color-gold">|</b> JAK DZIAŁAMY</h3>
             <h2>Rozwiązania szyte na miarę<br /> dla Twojego biznesu</h2>
 
             <div class="average-flex-container">
@@ -219,7 +219,7 @@
 
             <!-- light-gray bar Costs -->
             <div class="light-flex-container">
-                <h2 class="text-flex-item-left">
+                <h2 class="text-flex-item-right">
                     Ile to kosztuje?<br/>
                     <span class="color-gray">Wynagrodzenie pochodzi z </span>
                     <span class="color-gold">utworzonego zysku</span>
@@ -228,14 +228,14 @@
 
             <!-- gold Button Contact -->
             <div class="button-gold-flex-containter">
-                <a class="button-gold menu-button-gold">Skontaktuj się z nami</a>
+                <a href="mailto:cgajda@cg-consulting.pl" class="button-gold menu-button-gold">Skontaktuj się z nami</a>
             </div>
 
             <!-- parallax Gray -->
             <div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/grayboard.jpg"></div>
 
             <!-- Team -->
-            <h3><b>|</b> NASZ ZESPÓŁ</h3>
+            <h3 id="go_to_team"><b>|</b> NASZ ZESPÓŁ</h3>
             <h2>Kim jesteśmy?</h2>
 
             <div class="average-flex-container">
@@ -266,7 +266,7 @@
             </div>
 
             <!-- Our Clients -->
-            <h3><b class="color-gold">|</b>NASI KLIENCI</h3>
+            <h3 id="go_to_klienci"><b class="color-gold">|</b>NASI KLIENCI</h3>
             <h2>
                 <span class="color-gold">+7 lat </span>inspirującej działalności<br />
                 <span class="color-gray-darker">z markami własnymi, firmami i projektami powierzonymi</span>
@@ -312,19 +312,44 @@
 
 
             <!-- Contact Form -->
-            <div class="contact-flex-container">
-                <p>...Contact Form comming...</p>
-{#                <h3><b class="color-gold">|</b>KONTAKT</h3>#}
-{#                <h2>Skontaktuj się z nami</h2>#}
-{#                <div class="contact-flex-item">#}
-{#                    Imię i nazwisko#}
-{#                    Email#}
-{#                    Wiadomość#}
-{#                </div>#}
-{#                <div class="contact-flex-item">#}
-{#                    tu będą dane#}
-{#                </div>#}
+            <div id="go_to_kontakt" class="backgroud-light-grey">
+                <h3><b class="color-gold">|</b>KONTAKT</h3>
+                <h2>Skontaktuj się z nami</h2>
             </div>
+
+            <div class="contact-flex-container">
+
+                <form class="form-flex-container" action="{% url 'home' %}" method="post">
+                    {% csrf_token %}
+                    <fieldset>
+                        {% if status %}
+                            {{ status }}
+                        {% endif %}
+                        <label class="form-label" for="sender">Imię i nazwisko</label><br/>
+                        <input class="form-field" id="sender" type="text" name="sender-name" value="" required minlength="3" maxlength="80"><br/>
+                        <label class="form-label" for="sender">Email</label><br/>
+                        <input class="form-field" id="sender" type="email" name="sender-email" value="" required minlength="3" maxlength="254"><br/>
+                        <label class="form-label" for="sender" >Wiadomość</label><br/>
+                        <textarea class="form-field-textarea" name="message" rows="10" cols="30" required minlength="3"></textarea>
+                    </fieldset>
+                    <div class="form-send-btn">
+                        <input class="button-gold-form" type="submit" value="Wyślij">
+                    </div>
+
+                </form>
+
+                <div class="contact-data-container">
+                    <div class="form-data-text">
+                        <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> +48 601 406 149</p>
+                        <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/mail.png"> cgajda@cg-consulting.pl</p>
+                        <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/place.png"> Marszałkowska 126/134<br/>
+                        <img class="form-data-icon" src="" width="21">
+                        00-008 Warszawa</p>
+                    </div>
+                </div>
+            </div>
+
+
 
 
             <!-- Map -->
@@ -352,33 +377,42 @@
                 map.addControl(panel);
 
             </script>
+
             <hr class="gold-long">
 
 
-            <footer class="footer-flex-container">
-                <div class="footer-flex-item">
-                    <img src="/media/logoCGC_square_color.svg" width="121">
-                </div>
-                <div class="footer-flex-item">
-                    <div class="contact-h2">|KONTAKT</div>
-                    <div class="text-contact">
-                        <p><img class="contact-icon" src="/media/tel.png"> +48 601 406 149</p>
-                        <p><img class="contact-icon" src="/media/mail.png"> cgajda@cg-consulting.pl</p>
-                        <p><img class="contact-icon" src="/media/place.png"> Nasz Marszałkowska 126/134<br/>
-                        <img class="contact-icon" src="" width="21">
-                        00-008 Warszawa</p>
+            <footer class="footer-container">
+
+                <div class="footer-flex-data">
+
+                    <div class="footer-flex-item">
+                        <img src="/media/logoCGC_square_color.svg" width="121">
                     </div>
+
+                    <div class="footer-flex-item">
+                        <div class="contact-h2">|KONTAKT</div>
+                        <div class="text-contact">
+                            <p><img class="contact-icon" src="/media/tel.png"> +48 601 406 149</p>
+                            <p><img class="contact-icon" src="/media/mail.png"> cgajda@cg-consulting.pl</p>
+                            <p><img class="contact-icon" src="/media/place.png"> Marszałkowska 126/134<br/>
+                            <img class="contact-icon" src="" width="21">
+                            00-008 Warszawa</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-flex-item">
+                        <div class="contact-h3"><span class="color-gold">|</span>MAPA STRONY</div>
+                        <p class="text-contact-map">
+                            Start<br/>
+                            Usługi<br/>
+                            Nasz zespół<br/>
+                            Kariera<br/>
+                            Kontakt<br/>
+                        </p>
+                    </div>
+
                 </div>
-                <div class="footer-flex-item">
-                    <div class="contact-h3"><span class="color-gold">|</span>MAPA STRONY</div>
-                    <p class="text-contact-map">
-                        Start<br/>
-                        Usługi<br/>
-                        Nasz zespół<br/>
-                        Kariera<br/>
-                        Kontakt<br/>
-                    </p>
-                </div>
+
             </footer>
 
 
