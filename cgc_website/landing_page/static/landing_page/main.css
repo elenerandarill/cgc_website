@@ -267,8 +267,8 @@ ul {
     justify-content: space-between;
     align-items: flex-start;
 
-    min-width: 1055px;
-    padding: 0 140px 75px 140px;
+    min-width: 800px;
+    padding: 0 0 75px 0;
     /*border: 1px black solid;*/
 }
 .arrow-story-item {
@@ -295,6 +295,10 @@ ul {
     min-width: 20px;
     max-width: 100px;
     /*border: 1px black solid;*/
+}
+.arrow-story-padding {
+    flex-grow: 1;
+    min-width: 15px;
 }
 
 /* --- Light Gray Title --- */
