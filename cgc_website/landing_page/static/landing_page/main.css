@@ -2,7 +2,8 @@ body {
     background: #FCFCFC;
 }
 
-/* --- Navigation bar with logo --- */
+
+                                /* --- Navigation bar with logo --- */
 .navbar-flex-container {
     display: flex;
     flex-flow: row wrap;
@@ -47,7 +48,8 @@ body {
     margin-right: 22px;
 }
 
-/* --- Menu buttons --- */
+
+                                /* --- Menu buttons --- */
 a.menu-button:link, a.menu-button:visited {
     color: black;
     text-decoration: none;
@@ -64,8 +66,20 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
     color: #156E7A;
     text-decoration: none;
 }
+.v-down {
+    display: block;
+    align-items: center;
+    margin: 10px auto 0 auto;
+}
+.v-up {
+    display: block;
+    align-items: center;
+    margin: 0 auto 0 auto;
+}
 
-/* --- Parallax --- */
+
+
+                                /* --- Parallax --- */
 .parallax-window {
     min-height: 900px;
     background: transparent;
@@ -75,7 +89,8 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
     background: transparent;
 }
 
-/* --- Black box --- */
+
+                                /* --- Black box --- */
 .black-flex-container {
     display: flex;
     flex-flow: column wrap;
@@ -96,7 +111,8 @@ a.menu-button-kontakt:hover, a.menu-button-kontakt:active {
     /*border: 1px white solid;*/
 }
 
-/* --- Text --- */
+
+                                /* --- Text --- */
 .text-title {
     font-family: "Segoe UI, Bold", "Arial", sans-serif;
     text-align: left;
@@ -116,7 +132,8 @@ p.text-plain-white {
     color: white;
 }
 
-/* --- Headers --- */
+
+                                /* --- Headers --- */
 h1 {
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 50px;
@@ -149,7 +166,8 @@ h4 {
 }
 
 
-/* --- Colors --- */
+
+                                /* --- Colors --- */
 .color-gold {
     color: #C99C54;;
 }
@@ -167,7 +185,8 @@ h4 {
 }
 
 
-/* --- Gold button --- */
+
+                                /* --- Gold button --- */
 .button-gold {
     font-family: "Segoe UI", "Arial", sans-serif;
     font-size: 25px;
@@ -197,7 +216,8 @@ a.menu-button-gold:hover, a.menu-button-gold:active {
     text-decoration: none;
 }
 
-/* --- Services Layout --- */
+
+                                /* --- Services Layout --- */
 div.average-flex-container {
     display: flex;
     flex-flow: row wrap;
@@ -225,7 +245,8 @@ div.average-flex-container {
 }
 
 
-/* --- Actions Layout --- */
+
+                                /* --- Actions Layout --- */
 .actions-side-container {
     display: flex;
     flex-flow: row wrap;
@@ -239,7 +260,8 @@ div.average-flex-container {
     /*border: 1px black solid;*/
 }
 
-/* --- Lines and Lists --- */
+
+                                /* --- Lines and Lists --- */
 .gold-4px {
     height: 4px;
     width: 270px;
@@ -260,7 +282,8 @@ ul {
     margin: 0;
 }
 
-/* --- Arrow Story Layout --- */
+
+                                /* --- Arrow Story Layout --- */
 .arrow-story-container {
     display: flex;
     flex-flow: row wrap;
@@ -301,7 +324,8 @@ ul {
     min-width: 15px;
 }
 
-/* --- Light Gray Title --- */
+
+                                /* --- Light Gray Title --- */
 
 .light-flex-container {
     flex-basis: auto;
@@ -316,7 +340,8 @@ ul {
     line-height: 51px;
     text-align: right;
 }
-/* --- Team ---*/
+
+                                /* --- Team ---*/
 .team-item {
     display: flex;
     flex-flow: column wrap;
@@ -358,7 +383,8 @@ p.team {
     margin: 10px auto 0 auto;
 }
 
-/* --- Clients Logos --- */
+
+                                /* --- Clients Logos --- */
 .clients-logos-container {
     display: flex;
     flex-flow: row wrap;
@@ -392,7 +418,8 @@ img.logo-client-img:hover {
     filter:grayscale(0%);
 }
 
-/* --- Contact Form --- */
+
+                                /* --- Contact Form --- */
 
 .backgroud-light-grey {
     display: flex;
@@ -405,18 +432,21 @@ img.logo-client-img:hover {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
-    padding: 0 140px 100px 140px;
+    align-items: flex-start;
+    padding: 0 140px 30px 140px;
 
     background: #F6F6F6;
     /*border: 1px black solid;*/
 }
 .contact-data-container {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
+    /*flex-flow: column wrap;*/
+    justify-content: center;
+    align-items: flex-start;
     flex-grow: 1;
+    height: 100%;
+    margin-top: 70px;
+
     /*border: 1px black solid;*/
 }
 .form-flex-container {
@@ -477,20 +507,62 @@ img.logo-client-img:hover {
     font-weight: normal;
 
     color: black;
+    /*border: 1px darkblue solid;*/
 }
 .form-data-icon {
     width: 37px;
     margin-right: 10px;
 }
 .data-p-margin-bottom {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
-/* --- Footer --- */
+                                /* --- RODO --- */
+.rodo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 43px 0 0 0;
+
+    /*border: 1px darkblue solid;*/
+}
+
+.rodo-text {
+    flex-basis: 100%;
+    font-size: 12px;
+    /*max-width: 600px;*/
+    padding: 0;
+
+    width: 100%;
+    border: 0 white solid;
+    background-color: transparent;
+}
+/*.rodo-checkbox {*/
+/*    -webkit-appearance:none;*/
+/*    width:30px;*/
+/*    height:30px;*/
+/*    background:white;*/
+/*    border-radius:5px;*/
+/*    border:2px solid #555;*/
+/*}*/
+.rodo-checkbox {
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*background: #FFFFFF;*/
+    /*border: 1px #156E7A solid;*/
+    margin: 0 5px;
+}
+
+                                /* --- Footer --- */
+
 .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
     background: #F6F6F6;
     min-height: 358px;
-    padding: 42px 0 16px 0;
+    padding: 40px 140px 16px 140px;
 
     /*border: 1px red solid;*/
 }
@@ -501,13 +573,26 @@ img.logo-client-img:hover {
     align-items: flex-start;
     justify-content: center;
 
-    max-width: 780px;
-    /*border: 3px green solid;*/
+    /*border: 2px green solid;*/
+}
+.footer-flex-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+
+    width: auto;
+    /*border: 2px green solid;*/
 }
 
 .footer-flex-item{
     margin: 0 auto 30px auto;
     padding: 0 15px 0 15px;
+
+    /*border: 1px blue solid;*/
+}
+.footer-flex-item-right{
+    width: 110px;
+    text-align: center;
 
     /*border: 1px blue solid;*/
 }
@@ -534,6 +619,7 @@ img.logo-client-img:hover {
     font-size: 22px;
     line-height: 40px;
     min-width: 162px;
+
 
     color: black;
 }
