@@ -124,8 +124,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "landing_page", "media")
 MEDIA_URL = '/media/'
 
 # Email settings
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'mail.cg-consulting.pl'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'paulina@cg-consulting.pl'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD_CGC']
+# EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True

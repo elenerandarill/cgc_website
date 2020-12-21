@@ -227,20 +227,41 @@ div.average-flex-container {
     padding: 0 140px 75px 140px;
     /*border: 1px black solid;*/
 }
+div.average-flex-container-left {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+
+    flex-grow: 2;
+    /*padding: 0 140px 75px 140px;*/
+    border: 1px red solid;
+}
+div.average-flex-container-right {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    flex-grow: 1;
+    /*padding: 0 140px 0 140px;*/
+    border: 1px red solid;
+}
 
 .services-item {
     /*display: flex;*/
     /*flex-flow: column wrap;*/
     /*flex-basis: auto;*/
 
-    max-width: 423px;
+    max-width: 400px;
     padding: 0 10px 0 10px;
     margin: 35px auto;
 
-    /*border: 1px black solid;*/
+    border: 1px black solid;
 }
 .services-item-long {
-    max-width: 950px;
+    max-width: 850px;
     /*border: 1px black solid;*/
 }
 
