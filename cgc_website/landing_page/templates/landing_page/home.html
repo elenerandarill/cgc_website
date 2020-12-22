@@ -1,24 +1,28 @@
 <!doctype html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
-      <head>
-            <!-- Required meta tags -->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <style>
-                @font-face {
-                    font-family: "Source Serif Pro";
-                    src: url("{% static "/landing_page/fonts/SourceSerifPro-Regular.ttf" %}");
-                }
-            </style>
+        <style>
+            @font-face {
+                font-family: "Source Serif Pro";
+                src: url("{% static "/landing_page/fonts/SourceSerifPro-Regular.ttf" %}");
+            }
+        </style>
 
-            <!-- Bootstrap CSS -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-            <link rel="stylesheet" href="{% static 'landing_page/main.css' %}" type="text/css" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+              integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'landing_page/main.css' %}" type="text/css"/>
 
-            <title>CGConsulting</title>
-      </head>
+        <title>CGConsulting</title>
+
+        <link rel="icon" type="image/png" href="/media/favicon.png"/>
+    </head>
 
 
       <body>
@@ -35,12 +39,12 @@
 <!-- Navbar menu -->
                 <div class="navbar-menu-flex-container">
                     <div class="navbar-button-flex-item"><a class="menu-button" href="#start">START</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#uslugi">USŁUGI</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#jak_dzialamy">JAK DZIAŁAMY</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'USŁUGI' %}</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#jak_dzialamy">{% trans 'JAK DZIAŁAMY' %}</a></div>
                     <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#zespol">TEAM</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#klienci">KLIENCI</a></div>
-                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button-kontakt" href="{% url 'home' %}#kontakt">KONTAKT</a></div>
-                    <div class="navbar-button-flex-item"><a class="menu-button" href="{% url 'en_home' %}">EN</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#klienci">{% trans 'KLIENCI' %}</a></div>
+                    <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button-kontakt" href="{% url 'home' %}#kontakt">{% trans 'KONTAKT' %}</a></div>
+                    <div class="navbar-button-flex-item"><a class="menu-button" href="{{ lang_href }}">{{ lang_next }}</a></div>
                 </div>
             </header>
 
@@ -50,16 +54,16 @@
 <!-- Black box -->
                 <div class="black-flex-container">
                     <div class="black-flex-item text-title">
-                        <h1 class="color-white">Inspiruj swój biznes</h1>
-                        <h1 class="color-gold">i zaskocz konkurencję</h1>
+                        <h1 class="color-white">{% trans 'Inspiruj swój biznes' %}</h1>
+                        <h1 class="color-gold">{% trans 'i zaskocz konkurencję' %}</h1>
                     </div>
 
                     <div class="black-flex-item">
-                        <p class="text-plain text-plain-white ">Jakiekolwiek wyzwanie biznesowe czy technologiczne masz, pomożemy rozwijać Twoją firmę.</p>
+                        <p class="text-plain text-plain-white ">{% trans 'Jakiekolwiek wyzwanie biznesowe czy technologiczne masz, pomożemy rozwijać Twoją firmę.' %}</p>
                     </div>
 
                     <div class="black-flex-item">
-                        <a href="#uslugi" class="button-gold menu-button-gold">Sprawdź ofertę</a>
+                        <a href="#uslugi" class="button-gold menu-button-gold">{% trans 'Sprawdź ofertę' %}</a>
                     </div>
                 </div>
 
@@ -71,45 +75,51 @@
 
 
 <!-- Services part -->
-            <h3 id="uslugi"><b class="color-gold">|</b> NASZE USŁUGI</h3>
-            <h2>Rozwiązania szyte na miarę<br /> dla Twojego biznesu</h2>
+            <h3 id="uslugi"><b class="color-gold">|</b>{% trans ' NASZE USŁUGI' %}</h3>
+            <h2>{% trans 'Rozwiązania szyte na miarę' %}<br /> {% trans 'dla Twojego biznesu' %}</h2>
 
             <div class="average-flex-container">
                 <div class="services-item">
                      <hr class="gold-4px">
-                    <h4>Rozwój nowych produktów</h4>
-                    <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                    <h4>{% trans 'Rozwój nowych produktów' %}</h4>
+                    <p class="text-plain">
+                        {% trans '1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                    </p>
                 </div>
                 <div class="services-item">
                      <hr class="gold-4px">
-                    <h4>Rozwój działalności</h4>
-                    <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                    <h4>{% trans 'Rozwój działalności' %}</h4>
+                    <p class="text-plain">
+                        {% trans '2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                    </p>
                 </div>
                 <div class="services-item">
                      <hr class="gold-4px">
                     <h4>Outsourcing</h4>
-                    <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                    <p class="text-plain">
+                        {% trans '3 -  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                    </p>
                 </div>
                 <div class="services-item">
                      <hr class="gold-4px">
-                    <h4>Transformacja cyfrowa</h4>
-                    <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                    <h4>{% trans 'Transformacja cyfrowa' %}</h4>
+                    <p class="text-plain">
+                        {% trans '4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                    </p>
                 </div>
                 <div class="services-item">
                      <hr class="gold-4px">
-                    <h4>Usługi konsultacji</h4>
-                    <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                    <h4>{% trans 'Usługi konsultacji' %}</h4>
+                    <p class="text-plain">
+                        {% trans '5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                    </p>
                 </div>
                 <div class="services-item">
                      <hr class="gold-4px">
-                    <h4>Usługi IT</h4>
-                    <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                    <h4>{% trans 'Usługi IT' %}</h4>
+                    <p class="text-plain">
+                        {% trans '6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                    </p>
                 </div>
             </div>
 
@@ -119,8 +129,13 @@
 
 
 <!-- Actions part -->
-            <h3 id="jak_dzialamy"><b class="color-gold">|</b> JAK DZIAŁAMY</h3>
-            <h2>Jak możesz usprawnić<br /> <span class="color-gold">Swój biznes</span></h2>
+            <h3 id="jak_dzialamy"><b class="color-gold">|</b>{% trans ' JAK DZIAŁAMY' %}</h3>
+            <h2>
+                {% trans 'Jak możesz usprawnić ' %}<br />
+                <span class="color-gold">
+                    {% trans 'Swój biznes' %}
+                </span>
+            </h2>
 
             <div class="average-flex-container">
                 <div class="average-flex-container-left">
@@ -128,32 +143,42 @@
                          <hr class="gold-4px">
                         <h4>
                             <span class="color-gold">1. </span>
-                            Nawiązanie kontaktu <span class="color-gold">rozpoczęciem współpracy</span>
+                                {% trans 'Nawiązanie kontaktu ' %}<br />
+                            <span class="color-gold">
+                                {% trans 'rozpoczęciem współpracy' %}
+                            </span>
                         </h4>
-                        <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                        <p class="text-plain">
+                            {% trans '1a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                        </p>
                     </div>
 
                     <div class="services-item">
                         <hr class="gold-4px">
                         <h4>
                             <span class="color-gold">2. </span>
-                            Propozycja <span class="color-gold">działań </span>
+                                {% trans 'Propozycja ' %}
+                            <span class="color-gold">
+                                {% trans 'działań' %}
+                            </span>
                         </h4>
-                        <p class="text-plain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolor. Sed do eiusmod tempor incididun.</p>
+                        <p class="text-plain">
+                            {% trans '2a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                        </p>
                     </div>
 
                     <div class="services-item services-item-long">
                         <hr class="gold-4px">
                         <h4>
                             <span class="color-gold">3. </span>
-                            Stopniowe i sprawne <span class="color-gold">wdrożenie </span>
+                                {% trans 'Stopniowe i sprawne ' %}
+                            <span class="color-gold">
+                                {% trans 'wdrożenie' %}
+                            </span>
                         </h4>
-                        <p class="text-plain">Stopniowe wdrażanie wybranych rozwiązań pozwala na potwierdzenie ich
-                            przydatności i pomaga wypracować zysk na dalszy rozwój oraz utrzymanie. Ponadto, zmniejsza
-                            ich koszt inicjalny, a stała współpraca wpływa na pozytywny rozwój projektu i identyfikację
-                            nowych obszarów współpracy.</p>
+                        <p class="text-plain">
+                            {% trans 'wdrozenie_text' %}
+                        </p>
                     </div>
                 </div>
                 <div class="average-flex-container-right">
@@ -162,37 +187,32 @@
                             <img src="/media/ikona_czas.svg" width="55px" alt="ikona zegarka">
                         </div>
                         <div class="actions-side-item">
-                            <p class="text-plain"><b>Horyzont czasowy</b><br />(punkt odniesienia) 3-4 miesiące (zależy od zakresu)</p>
+                            <p class="text-plain">
+                                <b>{% trans "Horyzont czasowy" %}</b><br />
+                                {% trans '(punkt odniesienia) 3-4 miesiące (zależy od zakresu)' %}
+                            </p>
                         </div>
                         <div class="actions-side-item">
                             <img src="/media/ikona_dokumenty.svg" width="55px" alt="ikona dokumentów">
                         </div>
                         <div class="actions-side-item">
-                            <p class="text-plain"><b>Dokumenty</b><br />podpisanie NDA oraz umowy o współpracy</p>
+                            <p class="text-plain">
+                                <b>{% trans 'Dokumenty' %}</b><br />
+                                {% trans 'podpisanie NDA oraz umowy o współpracy' %}
+                            </p>
                         </div>
                         <div class="actions-side-item">
                             <img src="/media/ikona_pieniądze.svg" width="55px" >
                         </div>
                         <div class="actions-side-item">
-                            <p class="text-plain"><b>Koszt</b><br />Finansowanie konsultacji realizowane z wypracowanego zysku</p>
+                            <p class="text-plain">
+                                <b>{% trans 'Koszt' %}</b><br />
+                                {% trans 'Finansowanie konsultacji realizowane z wypracowanego zysku' %}
+                            </p>
                         </div>
                     </div>
                 </div>
 
-
-
-{##}
-{#                <div class="services-item services-item-long">#}
-{#                    <hr class="gold-4px">#}
-{#                    <h4>#}
-{#                        <span class="color-gold">3. </span>#}
-{#                        Stopniowe i sprawne <span class="color-gold">wdrożenie </span>#}
-{#                    </h4>#}
-{#                    <p class="text-plain">Stopniowe wdrażanie wybranych rozwiązań pozwala na potwierdzenie ich#}
-{#                        przydatności i pomaga wypracować zysk na dalszy rozwój oraz utrzymanie. Ponadto, zmniejsza#}
-{#                        ich koszt inicjalny, a stała współpraca wpływa na pozytywny rozwój projektu i identyfikację#}
-{#                        nowych obszarów współpracy.</p>#}
-{#                </div>#}
             </div>
 
 <!-- Arrow graphic -->
@@ -208,10 +228,10 @@
 
                 <div class="arrow-story-item arrow-story-item-first">
                     <img src="/media/arrow-first.png" style="display: block; align-items: center;"/>
-                    <h4>Raczkowanie</h4>
+                    <h4>{% trans 'Raczkowanie' %}</h4>
                     <ul>
-                        <li>MVP sprzedaż</li>
-                        <li>Wskazanie sukcesu</li>
+                        <li>{% trans 'MVP sprzedaż' %}</li>
+                        <li>{% trans 'Wskazanie sukcesu' %}</li>
                     </ul>
                 </div>
 
@@ -221,9 +241,9 @@
 
                 <div class="arrow-story-item arrow-story-item-second">
                     <img src="/media/arrow-second.png" style="display: block; align-items: center;"/>
-                    <h4>Chodzenie</h4>
+                    <h4>{% trans 'Chodzenie' %}</h4>
                     <ul>
-                        <li>Koncentracja na podstawach umożliwiających zwiększenie zysku</li>
+                        <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
                     </ul>
                 </div>
 
@@ -233,12 +253,12 @@
 
                 <div class="arrow-story-item arrow-story-item-third">
                     <img src="/media/arrow-third.png" style="display: block; align-items: center;"/>
-                    <h4>Bieg</h4>
+                    <h4>{% trans 'Bieg' %}</h4>
                     <ul>
-                        <li>Dalszy rozwój produktu</li>
-                        <li>Wprowadzenie nowych rozwiązań</li>
-                        <li>Poprawa wydajności</li>
-                        <li>Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe</li>
+                        <li>{% trans 'Dalszy rozwój produktu' %}</li>
+                        <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
+                        <li>{% trans 'Poprawa wydajności' %}</li>
+                        <li>{% trans 'Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe' %}</li>
                     </ul>
                 </div>
 
@@ -250,23 +270,25 @@
 <!-- light-gray bar Costs -->
             <div class="light-flex-container">
                 <h2 class="text-flex-item-right">
-                    Ile to kosztuje?<br/>
-                    <span class="color-gray">Wynagrodzenie pochodzi z </span>
-                    <span class="color-gold">utworzonego zysku</span>
+                    {% trans 'Ile to kosztuje?' %}<br/>
+                    <span class="color-gray">{% trans 'Wynagrodzenie pochodzi z ' %}</span>
+                    <span class="color-gold">{% trans 'utworzonego zysku' %}</span>
                 </h2>
             </div>
 
 <!-- gold Button Contact -->
             <div class="button-gold-flex-containter">
-                <a href="mailto:cgajda@cg-consulting.pl" class="button-gold menu-button-gold">Skontaktuj się z nami</a>
+                <a href="mailto:cgajda@cg-consulting.pl" class="button-gold menu-button-gold">
+                    {% trans 'Kontakt 1' %}
+                </a>
             </div>
 
 <!-- parallax Gray -->
             <div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/grayboard.jpg"></div>
 
 <!-- Team -->
-            <h3 id="zespol"><b>|</b> NASZ ZESPÓŁ</h3>
-            <h2>Kim jesteśmy?</h2>
+            <h3 id="zespol"><b>|</b> {% trans ' NASZ ZESPÓŁ' %}</h3>
+            <h2>{% trans 'Kim jesteśmy?' %}</h2>
 
             <div class="average-flex-container">
                 <div class="team-item">
@@ -274,32 +296,42 @@
                     <h4 class="team">Cyprian</h4>
                     <hr class="gold-2px">
                     <h4 class="team-gold">CEO • BUSINESS FAIRY</h4>
-                    <p class="team">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor.</p>
+                    <p class="team">
+                        {% trans 'Cyprian - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
+                    </p>
                 </div>
                 <div class="team-item">
                     <img class="team-img" src="/media/joanna.jpg" height="200" width="200">
                     <h4 class="team">Joanna</h4>
                     <hr class="gold-2px">
                     <h4 class="team-gold">SENIOR SOFTWARE DEVELOPER</h4>
-                    <p class="team">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor.</p>
+                    <p class="team">
+                        {% trans 'Joanna -Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
+                    </p>
                 </div>
                 <div class="team-item">
                     <img class="team-img" src="/media/aleksander.jpg" height="200" width="200">
                     <h4 class="team">Aleksander</h4>
                     <hr class="gold-2px">
                     <h4 class="team-gold">HEAD OF EMBEDDED SOFTWARE</h4>
-                    <p class="team">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolor.</p>
+                    <p class="team">
+                        {% trans 'Aleksander - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
+                    </p>
                 </div>
             </div>
 
 <!-- Our Clients -->
-            <h3 id="klienci"><b class="color-gold">|</b> NASI KLIENCI</h3>
+            <h3 id="klienci"><b class="color-gold">|</b>
+                {% trans ' NASI KLIENCI' %}
+            </h3>
             <h2>
-                <span class="color-gold">+7 lat </span>inspirującej działalności<br />
-                <span class="color-gray-darker">z markami własnymi, firmami i projektami powierzonymi</span>
+                <span class="color-gold">
+                    {% trans '+7 lat ' %}
+                </span>
+                    {% trans 'inspirującej działalności ' %}<br />
+                <span class="color-gray-darker">
+                    {% trans 'z markami własnymi, firmami i projektami powierzonymi' %}
+                </span>
             </h2>
 
             <div class="clients-logos-container">
@@ -358,8 +390,8 @@
 
 <!-- Contact Form -->
             <div id="kontakt" class="backgroud-light-grey">
-                <h3><b class="color-gold">|</b> KONTAKT</h3>
-                <h2>Skontaktuj się z nami</h2>
+                <h3><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
+                <h2>{% trans 'Kontakt 2' %}</h2>
             </div>
 
             <div class="contact-flex-container">
@@ -367,26 +399,30 @@
                 <form class="form-flex-container" action="{% url 'home' %}" method="post">
                     {% csrf_token %}
                     <fieldset>
-                        <label class="form-label" for="sender-name">Imię i nazwisko</label><br/>
+                        <label class="form-label" for="sender-name">
+                            {% trans 'Imię i nazwisko' %}
+                        </label><br/>
                         <input class="form-field" id="sender-name" type="text" name="sender-name" value="" required minlength="3" maxlength="80"><br/>
-                        <label class="form-label" for="sender-email">Email</label><br/>
+                        <label class="form-label" for="sender-email">
+                            {% trans 'Email' %}
+                        </label><br/>
                         <input class="form-field" id="sender-email" type="email" name="sender-email" value="" required minlength="3" maxlength="254"><br/>
-                        <label class="form-label" for="sender-message" >Wiadomość</label><br/>
+                        <label class="form-label" for="sender-message" >
+                            {% trans 'Wiadomość' %}
+                        </label><br/>
                         <textarea class="form-field-textarea" name="sender-message" rows="5" cols="30" required minlength="3"></textarea>
 
     <!-- RODO -->
                         <div class="rodo-container">
                             <input id="rodo" class="rodo-checkbox" type="checkbox" name="rodo-terms" value="True" required>
 
-                            <textarea class="rodo-text" rows="5" disabled>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia mi odpowiedzi na pytania zadanie poprzez formularz kontaktowy.
-Jeżeli moje pytanie dotyczyć będzie oferty handlowej Administratora, wyrażam zgodę na przesyłanie mi informacji handlowych drogą elektroniczną i przy użyciu telekomunikacyjnych urządzeń końcowych (e-mailem lub telefonicznie).
-Administratorem danych jest CG-consulting sp. z o.o. z siedzibą w Bydgoszczy (85-034), ul. Długa 16 wpisana do Krajowego Rejestru Przedsiębiorców prowadzonego przez Sąd Rejonowy w ??? pod numerem KRS 0000794990, NIP 9532769007, REGON 383889583.</textarea>
+                            <textarea class="rodo-text" rows="5" disabled>{% trans 'RODO' %}</textarea>
 
                         </div>
 
                     </fieldset>
                     <div class="form-send-btn">
-                        <input class="button-gold-form" type="submit" value="Wyślij">
+                        <input class="button-gold-form" type="submit" value="{% trans 'Wyślij' %}">
                     </div>
 
                 </form>
@@ -396,8 +432,9 @@ Administratorem danych jest CG-consulting sp. z o.o. z siedzibą w Bydgoszczy (8
                         <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> +48 601 406 149</p>
                         <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/mail.png"> cgajda@cg-consulting.pl</p>
                         <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/place.png"> Marszałkowska 126/134<br/>
-                        <img class="form-data-icon" src="" width="21">
-                        00-008 Warszawa</p>
+                            <img class="form-data-icon" src="" width="21">
+                            {% trans '00-008 Warszawa' %}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -443,23 +480,24 @@ Administratorem danych jest CG-consulting sp. z o.o. z siedzibą w Bydgoszczy (8
                     </div>
 
                     <div class="footer-flex-item">
-                        <div class="contact-h2">| KONTAKT</div>
+                        <div class="contact-h2">|{% trans ' KONTAKT' %}</div>
                         <div class="text-contact">
                             <p><img class="contact-icon" src="/media/tel.png" alt="numer telefonu"> +48 601 406 149</p>
                             <p><img class="contact-icon" src="/media/mail.png" alt="e-mail"> cgajda@cg-consulting.pl</p>
                             <p><img class="contact-icon" src="/media/place.png" alt="adres"> Marszałkowska 126/134<br/>
-                            <span style="padding-left: 38px">00-008 Warszawa</span></p>
+                                <span style="padding-left: 38px">{% trans '00-008 Warszawa' %}</span>
+                            </p>
                         </div>
                     </div>
 
                     <div class="footer-flex-item">
-                        <div class="contact-h3"><span class="color-gold">|</span> MAPA STRONY</div>
+                        <div class="contact-h3"><span class="color-gold">|</span>{% trans ' MAPA STRONY' %}</div>
                         <p class="text-contact-map">
                             <a class="menu-button" href="{% url 'home' %}">Start</a><br/>
-                            <a class="menu-button" href="{% url 'home' %}#uslugi">Usługi</a><br/>
-                            <a class="menu-button" href="{% url 'home' %}#zespol">Nasz zespół</a><br/>
-                            <a class="menu-button" href="#">Kariera</a><br/>
-                            <a class="menu-button" href="{% url 'home' %}#kontakt">Kontakt</a><br/>
+                            <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'Usługi' %}</a><br/>
+                            <a class="menu-button" href="{% url 'home' %}#zespol">{% trans 'Nasz zespół' %}</a><br/>
+                            <a class="menu-button" href="#">{% trans 'Kariera' %}</a><br/>
+                            <a class="menu-button" href="{% url 'home' %}#kontakt">{% trans 'Kontakt' %}</a><br/>
                         </p>
                     </div>
 
@@ -470,7 +508,7 @@ Administratorem danych jest CG-consulting sp. z o.o. z siedzibą w Bydgoszczy (8
                         <a class="menu-button" href="{% url 'home' %}">
                             <img class="v-up" src="/media/v-sign-up.png" width="26px" alt="wróć na start"/>
                         </a>
-                        <a class="text-contact menu-button" href="{% url 'home' %}">Do góry</a>
+                        <a class="text-contact menu-button" href="{% url 'home' %}">{% trans 'Do góry' %}</a>
                     </div>
                 </div>
 

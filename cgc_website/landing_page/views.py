@@ -3,6 +3,9 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 
 # Where emails from form will be send to.
+from django.urls import reverse
+from django.utils.translation import activate
+
 to_email = 'paulina@cg-consulting.pl'
 
 
@@ -21,19 +24,30 @@ def send_email(the_request):
 
 
 def home(request):
+    current_language = request.LANGUAGE_CODE
+    context = {"lang_code": current_language}
+
+    if current_language == "pl":
+        context['lang_next'] = "EN"
+        activate("en")
+        context['lang_href'] = reverse("home")
+        activate("pl")
+    else:
+        context['lang_next'] = "PL"
+        activate("pl")
+        context['lang_href'] = reverse("home")
+        activate("en")
+
     if request.method == "POST":
         send_email(request.POST)
-        print('*******email sent')
-        return render(request, "landing_page/home.html", {'status': "Success"})
-    else:
-        return render(request, "landing_page/home.html")
+    return render(request, "landing_page/home.html", context=context)
 
-
-# English version.
-def en_home(request):
-    if request.method == "POST":
-        send_email(request.POST)
-        print('******email sent2')
-        return render(request, "landing_page/en/home.html", {})
-    else:
-        return render(request, "landing_page/en/home.html")
+#
+# # English version.
+# def en_home(request):
+#     if request.method == "POST":
+#         send_email(request.POST)
+#         print('******email sent2')
+#         return render(request, "landing_page/en/home.html", {})
+#     else:
+#         return render(request, "landing_page/en/home.html")
