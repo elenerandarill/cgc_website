@@ -19,7 +19,7 @@ def send_email(the_request):
         subject=f"Formularz kontaktowy CGC: od {sender_name}.",
         message=f"Sender name: {sender_name},\nSender email: {sender_email},\n\nMessage: {sender_message} ",
         from_email=to_email,
-        recipient_list=[to_email],
+        recipient_list=[to_email, 'cgajda@cg-consulting.pl'],
     )
 
 
