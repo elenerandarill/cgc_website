@@ -17,7 +17,10 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
               integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
         <link rel="stylesheet" href="{% static 'landing_page/main.css' %}" type="text/css"/>
+        <link rel="stylesheet" media="screen and (max-width: 1080px)" href="{% static 'landing_page/medium.css' %}" type="text/css"/>
+        <link rel="stylesheet" media="screen and (max-width: 600px)" href="{% static 'landing_page/small.css' %}" type="text/css"/>
 
         <title>CGConsulting</title>
 
@@ -27,7 +30,7 @@
 
       <body>
 
-            <header id="start" class="navbar-flex-container">
+            <header id="start" class="site-margin navbar-flex-container">
 <!-- Navbar logo -->
                 <div class="navbar-logo-flex-container">
                     <div class="navbar-logo-flex-item">
@@ -75,10 +78,10 @@
 
 
 <!-- Services part -->
-            <h3 id="uslugi"><b class="color-gold">|</b>{% trans ' NASZE USŁUGI' %}</h3>
-            <h2>{% trans 'Rozwiązania szyte na miarę' %}<br /> {% trans 'dla Twojego biznesu' %}</h2>
+            <h3 class="site-margin" id="uslugi"><b class="color-gold">|</b>{% trans ' NASZE USŁUGI' %}</h3>
+            <h2 class="site-margin">{% trans 'Rozwiązania szyte na miarę' %}<br /> {% trans 'dla Twojego biznesu' %}</h2>
 
-            <div class="basic-flex-container-services">
+            <div class="basic-flex-container-services site-margin">
                 <div class="services-item">
                      <hr class="gold-4px">
                     <h4>{% trans 'Rozwój nowych produktów' %}</h4>
@@ -129,17 +132,17 @@
 
 
 <!-- Workflow part -->
-            <h3 id="jak_dzialamy"><b class="color-gold">|</b>{% trans ' JAK DZIAŁAMY' %}</h3>
-            <h2>
+            <h3 class="site-margin" id="jak_dzialamy"><b class="color-gold">|</b>{% trans ' JAK DZIAŁAMY' %}</h3>
+            <h2 class="site-margin">
                 {% trans 'Jak możesz usprawnić ' %}<br />
                 <span class="color-gold">
                     {% trans 'Swój biznes' %}
                 </span>
             </h2>
 
-            <div class="basic-flex-container-workflow">
+            <div class="basic-flex-container-workflow site-margin">
                 <div class="basic-flex-container-left">
-                    <div class="services-item-actions">
+                    <div class="services-item services-item-actions">
                          <hr class="gold-4px">
                         <h4>
                             <span class="color-gold">1. </span>
@@ -153,7 +156,7 @@
                         </p>
                     </div>
 
-                    <div class="services-item-actions">
+                    <div class="services-item services-item-actions">
                         <hr class="gold-4px">
                         <h4>
                             <span class="color-gold">2. </span>
@@ -271,12 +274,14 @@
             </div>
 
 <!-- light-gray bar Costs -->
-            <div class="light-flex-container">
-                <h2 class="text-flex-item-right">
-                    {% trans 'Ile to kosztuje?' %}<br/>
-                    <span class="color-gray">{% trans 'Wynagrodzenie pochodzi z ' %}</span>
-                    <span class="color-gold">{% trans 'utworzonego zysku' %}</span>
-                </h2>
+            <div class="bg-alt">
+                <div class="light-flex-container site-margin">
+                    <h2 class="text-flex-item-right">
+                        {% trans 'Ile to kosztuje?' %}<br/>
+                        <span class="color-gray">{% trans 'Wynagrodzenie pochodzi z ' %}</span>
+                        <span class="color-gold">{% trans 'utworzonego zysku' %}</span>
+                    </h2>
+                </div>
             </div>
 
 <!-- gold Button Contact -->
@@ -290,10 +295,10 @@
             <div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/grayboard.jpg"></div>
 
 <!-- Team -->
-            <h3 id="zespol"><b>|</b> {% trans ' NASZ ZESPÓŁ' %}</h3>
-            <h2>{% trans 'Kim jesteśmy?' %}</h2>
+            <h3 class="site-margin" id="zespol"><b>|</b> {% trans ' NASZ ZESPÓŁ' %}</h3>
+            <h2 class="site-margin">{% trans 'Kim jesteśmy?' %}</h2>
 
-            <div class="basic-flex-container">
+            <div class="basic-flex-container site-margin">
                 <div class="team-item">
                     <img class="team-img" src="/media/cyprian.jpg" height="200" width="200">
                     <h4 class="team">Cyprian</h4>
@@ -324,10 +329,10 @@
             </div>
 
 <!-- Our Clients -->
-            <h3 id="klienci"><b class="color-gold">|</b>
+            <h3 class="site-margin" id="klienci"><b class="color-gold">|</b>
                 {% trans ' NASI KLIENCI' %}
             </h3>
-            <h2>
+            <h2 class="site-margin">
                 <span class="color-gold">
                     {% trans '+7 lat ' %}
                 </span>
@@ -337,7 +342,7 @@
                 </span>
             </h2>
 
-            <div class="clients-logos-container">
+            <div class="clients-logos-container site-margin">
                 <div class="client-logo-item">
                     <img class="logo-client-img" src="/media/Logos/RestHostel.png">
                 </div>
@@ -393,51 +398,60 @@
 
 <!-- Contact Form -->
             <div id="kontakt" class="backgroud-light-grey">
-                <h3><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
-                <h2>{% trans 'Kontakt 2' %}</h2>
+                <h3 class="site-margin"><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
+                <h2 class="site-margin">{% trans 'Kontakt 2' %}</h2>
             </div>
+            <div class="bg-alt">
+                <div class="contact-flex-container site-margin">
 
-            <div class="contact-flex-container">
+                    <form class="form-flex-container" action="{% url 'home' %}" method="post">
+                        {% csrf_token %}
+                        <fieldset>
+                            <h2 class="h2-write-us-medium ">{% trans 'Kontakt 3' %}</h2><br/>
+                            <label class="form-label" for="sender-name">
+                                {% trans 'Imię i nazwisko' %}
+                            </label><br/>
+                            <input class="form-field" id="sender-name" type="text" name="sender-name" value="" required
+                                   minlength="3" maxlength="80"><br/>
+                            <label class="form-label" for="sender-email">
+                                {% trans 'Email' %}
+                            </label><br/>
+                            <input class="form-field" id="sender-email" type="email" name="sender-email" value=""
+                                   required minlength="3" maxlength="254"><br/>
+                            <label class="form-label" for="sender-message">
+                                {% trans 'Wiadomość' %}
+                            </label><br/>
+                            <textarea class="form-field-textarea" name="sender-message" rows="5" cols="30" required
+                                      minlength="3"></textarea>
 
-                <form class="form-flex-container" action="{% url 'home' %}" method="post">
-                    {% csrf_token %}
-                    <fieldset>
-                        <label class="form-label" for="sender-name">
-                            {% trans 'Imię i nazwisko' %}
-                        </label><br/>
-                        <input class="form-field" id="sender-name" type="text" name="sender-name" value="" required minlength="3" maxlength="80"><br/>
-                        <label class="form-label" for="sender-email">
-                            {% trans 'Email' %}
-                        </label><br/>
-                        <input class="form-field" id="sender-email" type="email" name="sender-email" value="" required minlength="3" maxlength="254"><br/>
-                        <label class="form-label" for="sender-message" >
-                            {% trans 'Wiadomość' %}
-                        </label><br/>
-                        <textarea class="form-field-textarea" name="sender-message" rows="5" cols="30" required minlength="3"></textarea>
+                            <!-- RODO -->
+                            <div class="rodo-container">
+                                <input id="rodo" class="rodo-checkbox" type="checkbox" name="rodo-terms" value="True"
+                                       required>
 
-    <!-- RODO -->
-                        <div class="rodo-container">
-                            <input id="rodo" class="rodo-checkbox" type="checkbox" name="rodo-terms" value="True" required>
+                                <textarea class="rodo-text" rows="5" disabled>{% trans 'RODO' %}</textarea>
 
-                            <textarea class="rodo-text" rows="5" disabled>{% trans 'RODO' %}</textarea>
+                            </div>
 
+                        </fieldset>
+                        <div class="form-send-btn">
+                            <input class="button-gold-form" type="submit" value="{% trans 'Wyślij' %}">
                         </div>
 
-                    </fieldset>
-                    <div class="form-send-btn">
-                        <input class="button-gold-form" type="submit" value="{% trans 'Wyślij' %}">
-                    </div>
+                    </form>
 
-                </form>
-
-                <div class="contact-data-container">
-                    <div class="form-data-text">
-                        <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> +48 601 406 149</p>
-                        <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/mail.png"> cgajda@cg-consulting.pl</p>
-                        <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/place.png"> Marszałkowska 126/134<br/>
-                            <img class="form-data-icon" src="" width="21">
-                            {% trans '00-008 Warszawa' %}
-                        </p>
+                    <div class="contact-data-container">
+                        <div class="form-data-text">
+                            <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> +48 601
+                                406 149</p>
+                            <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/mail.png">
+                                cgajda@cg-consulting.pl</p>
+                            <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/place.png">
+                                Marszałkowska 126/134<br/>
+                                <img class="form-data-icon" src="" width="21">
+                                {% trans '00-008 Warszawa' %}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -446,7 +460,7 @@
 
 
 <!-- Map -->
-            <div id="demoMap" style="height:660px"></div>
+            <div id="demoMap" class="map-style"></div>
             <script src={% static "/landing_page/osm/OpenLayers.js" %}></script>
             <script>
                 var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
@@ -474,48 +488,61 @@
             <hr class="gold-long">
 
 <!-- Footer -->
-            <footer class="footer-container">
+            <div class="bg-alt">
+                <footer id="footer" class="site-margin footer-container">
 
-                <div class="footer-flex-data">
+    {#                <div class="filler-footer"></div>#}
 
-                    <div class="footer-flex-item">
-                        <a href="{% url 'home' %}"><img src="/media/logoCGC_square_color.svg" width="121" alt="logo CG-consulting"></a>
+                    <div class="footer-flex-data">
+                        <!-- logo -->
+                        <div class="footer-flex-item-logo">
+                            <a href="{% url 'home' %}">
+                                <img class="footer-logo-square" src="/media/logoCGC_square_color.svg" alt="logo CG-consulting">
+                                <!-- or long -->
+                                <img class="footer-logo-long" src="/media/logoCGC_long_color.svg" alt="logo CG-consulting">
+                            </a>
+                        </div>
+
+                        <!-- contact info -->
+                        <div class="footer-flex-item-info">
+                            <div class="contact-h2">|{% trans ' KONTAKT' %}</div>
+                            <div class="text-contact">
+                                <p><img class="contact-icon" src="/media/tel.png" alt="numer telefonu"> +48 601 406 149</p>
+                                <p><img class="contact-icon" src="/media/mail.png" alt="e-mail"> cgajda@cg-consulting.pl</p>
+                                <p><img class="contact-icon" src="/media/place.png" alt="adres"> Marszałkowska 126/134<br/>
+                                    <span style="padding-left: 38px">{% trans '00-008 Warszawa' %}</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- roadmap -->
+                        <div class="footer-flex-item-map">
+                            <div class="contact-h3"><span class="color-gold">|</span>{% trans ' MAPA STRONY' %}</div>
+                            <p class="text-contact-map">
+                                <a class="menu-button" href="{% url 'home' %}">Start</a><br/>
+                                <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'Usługi' %}</a><br/>
+                                <a class="menu-button" href="{% url 'home' %}#zespol">{% trans 'Nasz zespół' %}</a><br/>
+                                <a class="menu-button" href="#">{% trans 'Kariera' %}</a><br/>
+                                <a class="menu-button" href="{% url 'home' %}#kontakt">{% trans 'Kontakt' %}</a><br/>
+                            </p>
+                        </div>
+
                     </div>
 
-                    <div class="footer-flex-item">
-                        <div class="contact-h2">|{% trans ' KONTAKT' %}</div>
-                        <div class="text-contact">
-                            <p><img class="contact-icon" src="/media/tel.png" alt="numer telefonu"> +48 601 406 149</p>
-                            <p><img class="contact-icon" src="/media/mail.png" alt="e-mail"> cgajda@cg-consulting.pl</p>
-                            <p><img class="contact-icon" src="/media/place.png" alt="adres"> Marszałkowska 126/134<br/>
-                                <span style="padding-left: 38px">{% trans '00-008 Warszawa' %}</span>
-                            </p>
+                        <!-- arrow up -->
+                    <div class="footer-flex-right">
+                        <div class="footer-flex-item-right">
+                            <a class="menu-button" href="{% url 'home' %}">
+                                <img class="v-up" src="/media/v-sign-up.png" width="26px" alt="wróć na start"/>
+                            </a>
+                            <a class="text-contact menu-button" href="{% url 'home' %}">{% trans 'Do góry' %}</a>
                         </div>
                     </div>
 
-                    <div class="footer-flex-item">
-                        <div class="contact-h3"><span class="color-gold">|</span>{% trans ' MAPA STRONY' %}</div>
-                        <p class="text-contact-map">
-                            <a class="menu-button" href="{% url 'home' %}">Start</a><br/>
-                            <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'Usługi' %}</a><br/>
-                            <a class="menu-button" href="{% url 'home' %}#zespol">{% trans 'Nasz zespół' %}</a><br/>
-                            <a class="menu-button" href="#">{% trans 'Kariera' %}</a><br/>
-                            <a class="menu-button" href="{% url 'home' %}#kontakt">{% trans 'Kontakt' %}</a><br/>
-                        </p>
-                    </div>
+    {#                <div class="filler-footer"></div>#}
 
-                </div>
-
-                <div class="footer-flex-right">
-                    <div class="footer-flex-item-right">
-                        <a class="menu-button" href="{% url 'home' %}">
-                            <img class="v-up" src="/media/v-sign-up.png" width="26px" alt="wróć na start"/>
-                        </a>
-                        <a class="text-contact menu-button" href="{% url 'home' %}">{% trans 'Do góry' %}</a>
-                    </div>
-                </div>
-
-            </footer>
+                </footer>
+            </div>
 
 
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
