@@ -78,7 +78,7 @@
             <h3 id="uslugi"><b class="color-gold">|</b>{% trans ' NASZE USŁUGI' %}</h3>
             <h2>{% trans 'Rozwiązania szyte na miarę' %}<br /> {% trans 'dla Twojego biznesu' %}</h2>
 
-            <div class="average-flex-container">
+            <div class="basic-flex-container-services">
                 <div class="services-item">
                      <hr class="gold-4px">
                     <h4>{% trans 'Rozwój nowych produktów' %}</h4>
@@ -128,7 +128,7 @@
 
 
 
-<!-- Actions part -->
+<!-- Workflow part -->
             <h3 id="jak_dzialamy"><b class="color-gold">|</b>{% trans ' JAK DZIAŁAMY' %}</h3>
             <h2>
                 {% trans 'Jak możesz usprawnić ' %}<br />
@@ -137,9 +137,9 @@
                 </span>
             </h2>
 
-            <div class="average-flex-container">
-                <div class="average-flex-container-left">
-                    <div class="services-item">
+            <div class="basic-flex-container-workflow">
+                <div class="basic-flex-container-left">
+                    <div class="services-item-actions">
                          <hr class="gold-4px">
                         <h4>
                             <span class="color-gold">1. </span>
@@ -153,7 +153,7 @@
                         </p>
                     </div>
 
-                    <div class="services-item">
+                    <div class="services-item-actions">
                         <hr class="gold-4px">
                         <h4>
                             <span class="color-gold">2. </span>
@@ -181,35 +181,38 @@
                         </p>
                     </div>
                 </div>
-                <div class="average-flex-container-right">
+                <div class="basic-flex-container-right">
                     <div class="services-item actions-side-container">
                         <div class="actions-side-item">
-                            <img src="/media/ikona_czas.svg" width="55px" alt="ikona zegarka">
+                            <img class="actions-side-image" src="/media/ikona_czas.svg" alt="ikona zegarka">
+                            <div>
+                                <p class="text-plain">
+                                    <b>{% trans "Horyzont czasowy" %}</b><br/>
+                                    {% trans '(punkt odniesienia) 3-4 miesiące (zależy od zakresu)' %}
+                                </p>
+                            </div>
                         </div>
+
                         <div class="actions-side-item">
-                            <p class="text-plain">
-                                <b>{% trans "Horyzont czasowy" %}</b><br />
-                                {% trans '(punkt odniesienia) 3-4 miesiące (zależy od zakresu)' %}
-                            </p>
+                            <img class="actions-side-image"  src="/media/ikona_dokumenty.svg" width="55px" alt="ikona dokumentów">
+                            <div>
+                                <p class="text-plain">
+                                    <b>{% trans 'Dokumenty' %}</b><br/>
+                                    {% trans 'podpisanie NDA oraz umowy o współpracy' %}
+                                </p>
+                            </div>
                         </div>
+
                         <div class="actions-side-item">
-                            <img src="/media/ikona_dokumenty.svg" width="55px" alt="ikona dokumentów">
+                            <img class="actions-side-image"  src="/media/ikona_pieniądze.svg" width="55px">
+                            <div>
+                                <p class="text-plain">
+                                    <b>{% trans 'Koszt' %}</b><br/>
+                                    {% trans 'Finansowanie konsultacji realizowane z wypracowanego zysku' %}
+                                </p>
+                            </div>
                         </div>
-                        <div class="actions-side-item">
-                            <p class="text-plain">
-                                <b>{% trans 'Dokumenty' %}</b><br />
-                                {% trans 'podpisanie NDA oraz umowy o współpracy' %}
-                            </p>
-                        </div>
-                        <div class="actions-side-item">
-                            <img src="/media/ikona_pieniądze.svg" width="55px" >
-                        </div>
-                        <div class="actions-side-item">
-                            <p class="text-plain">
-                                <b>{% trans 'Koszt' %}</b><br />
-                                {% trans 'Finansowanie konsultacji realizowane z wypracowanego zysku' %}
-                            </p>
-                        </div>
+
                     </div>
                 </div>
 
@@ -290,7 +293,7 @@
             <h3 id="zespol"><b>|</b> {% trans ' NASZ ZESPÓŁ' %}</h3>
             <h2>{% trans 'Kim jesteśmy?' %}</h2>
 
-            <div class="average-flex-container">
+            <div class="basic-flex-container">
                 <div class="team-item">
                     <img class="team-img" src="/media/cyprian.jpg" height="200" width="200">
                     <h4 class="team">Cyprian</h4>
