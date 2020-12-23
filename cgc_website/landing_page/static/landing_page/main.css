@@ -285,14 +285,13 @@ div.basic-flex-container-right {
 
 .services-item {
     max-width: 430px;
-    padding: 0 15px 0 15px;
+    padding-right: 20px;
     margin-top: 35px;
 
     /*border: 1px black solid;*/
 }
 .services-item-actions {
     flex-grow: 1;
-    /*padding: 0 20px;*/
 
     /*border: 1px black solid;*/
 }
@@ -348,8 +347,68 @@ ul {
     margin: 0;
 }
 
+                                /* --- Arrow Carousel - wisible below 1081px --- */
+.small-story-arrow-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container-slideshow {
+  position: relative;
+    display: none;
+}
 
-                                /* --- Arrow Story Layout --- */
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.slide-inner {
+    max-width: 400px;
+    min-height: 300px;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+a.prev:link, a.next:link {
+    color: #C99C54;
+    text-decoration: none;
+}
+a.prev:hover, a.next:hover {
+    color: #156E7A;
+    text-decoration: none;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #C99C54;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  /*border-radius: 3px 0 0 3px;*/
+}
+
+
+
+                                /* --- Arrow Story Layout - wisible only above 1080px! --- */
 .arrow-story-container {
     display: flex;
     flex-flow: row wrap;
@@ -359,6 +418,15 @@ ul {
     min-width: 800px;
     padding: 0 0 75px 0;
     /*border: 1px black solid;*/
+}
+.arrow-img {
+    display: block;
+    align-items: center;
+}
+.arrow-img-narrow {
+    display: block;
+    align-items: center;
+    width: 29px;
 }
 .arrow-story-item {
     min-width: 150px;
@@ -379,15 +447,30 @@ ul {
     min-width: 5px;
     /*border: 1px black solid;*/
 }
+.arrow-middle-part {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 119px;
+}
 .arrow-story-line-first {
     flex-grow: 1;
     min-width: 20px;
     max-width: 100px;
     /*border: 1px black solid;*/
 }
+.arrow-story-line-middle {
+    flex-grow: 1;
+    min-width: 20px;
+    /*border: 1px black solid;*/
+}
 .arrow-story-padding {
     flex-grow: 1;
     min-width: 15px;
+}
+.arrow-dashed {
+    flex-basis: 5px;
+    background-repeat: repeat-x;
 }
 
 
