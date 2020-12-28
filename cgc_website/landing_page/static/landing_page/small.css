@@ -1,2 +1,52 @@
 /* --- For screens up to 600px wide ---*/
 
+/* -------------------------------------- Style the navbar */
+#navbar-small-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  z-index: 100;
+}
+/* navigation for bigger screens */
+.navbar-flex-container {
+  display: none;
+}
+.navbar-logo-flex-container {
+  display: none;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.nvb-small-scr-container {
+  height: 50px;
+  width: 100%;
+  padding: 12px 23px;
+  box-shadow: 0 3px 6px 0 #00000029 ;
+}
+
+.bars-style {
+  text-decoration: none;
+  font-size: 30px;
+  color: #121212;
+}
+
+.bars-style:link, .bars-style:visited {
+  text-decoration: none;
+}
+.bars-style:hover, .bars-style:active {
+  text-decoration: none;
+  font-size: 30px;
+  color: #C99C54;
+}

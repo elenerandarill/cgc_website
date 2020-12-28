@@ -27,17 +27,53 @@
     <title>CGConsulting</title>
 
     <link rel="icon" type="image/png" href="/media/favicon.png"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </head>
 
 
 <body>
 
+
+    <!-- Navbar sticky for small screens -->
+
+
+    <div id="navbar-small-screen" class=" nvb-small-scr-container site-margin">
+        <a href="{% url 'home' %}">
+            <img src="/media/logoCGC_long_color.svg" alt="logo CGC" width="157"/>
+        </a>
+        <a href="{% url 'home' %}" class="fas fa-bars bars-style"></a>
+    </div>
+
+
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar-small-screen");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+        <!-- Navbar for bigger screens -->
 <header id="start" class="site-margin navbar-flex-container">
+
     <!-- Navbar logo -->
     <div class="navbar-logo-flex-container">
         <div class="navbar-logo-flex-item">
             <a href="{% url 'home' %}">
-                <img src="/media/logoCGC_long_color.svg" alt="logo CGC" style="width:299px;"/>
+                <img src="/media/logoCGC_long_color.svg" alt="logo CGC" width="299"/>
             </a>
         </div>
     </div>
