@@ -33,13 +33,27 @@
 
 <body>
 
+<!-- ****** Curtain menu - visible for SMALL screens ****** -->
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="{% url 'home' %}" onclick="closeNav()">{% trans 'menu-home' %}</a>
+        <a href="{% url 'home' %}#uslugi" onclick="closeNav()">{% trans 'menu-2' %}</a>
+        <a href="{% url 'home' %}#zespol" onclick="closeNav()">{% trans 'menu-3' %}</a>
+        <a href="{% url 'home' %}" onclick="closeNav()">{% trans 'menu-4' %}</a>
+        <a href="{% url 'home' %}#kontakt" onclick="closeNav()">{% trans 'menu-5' %}</a><br/>
+        <a href="{{ lang_href }}">{% trans 'menu-lang' %}</a>
+    </div>
+</div>
+<!-- ******  ******  ******  -->
+
 <!-- ****** Navbar sticky - visible for SMALL screens ****** -->
 
     <div id="navbar-sm-scr" class=" nvb-sm-scr-container site-margin sticky">
         <a href="{% url 'home' %}">
             <img src="/media/logoCGC_long_color.svg" alt="logo CGC" width="157"/>
         </a>
-        <a href="{% url 'home' %}" class="bars-style">&#9776;</a>
+        <span onclick="openNav()" class="bars-style">&#9776;</span>
     </div>
 <!-- ******  ******  ******  -->
 
@@ -58,8 +72,8 @@
             <!-- Navbar menu -->
         <div class="navbar-menu-flex-container">
             <div class="navbar-button-flex-item"><a class="menu-button" href="#start">START</a></div>
-            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
-                                                                         href="{% url 'home' %}#uslugi">{% trans 'USŁUGI' %}</a>
+            <div class="navbar-button-flex-item navbar-button-middle">
+                <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'USŁUGI' %}</a>
             </div>
             <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
                                                                          href="{% url 'home' %}#jak_dzialamy">{% trans 'JAK DZIAŁAMY' %}</a>
@@ -698,149 +712,159 @@
         <h3 class="site-margin"><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
         <h2 class="site-margin">{% trans 'Kontakt 2' %}</h2>
     </div>
-<div class="bg-alt">
-    <div class="contact-flex-container site-margin">
+    <div class="bg-alt">
+        <div class="contact-flex-container site-margin">
 
-        <form class="form-flex-container" action="{% url 'home' %}" method="post">
-            {% csrf_token %}
-            <fieldset>
-                <h2 class="h2-write-us-medium ">{% trans 'Kontakt 3' %}</h2>
-                <label class="form-label" for="sender-name">
-                    {% trans 'Imię i nazwisko' %}
-                </label><br/>
-                <input class="form-field" id="sender-name" type="text" name="sender-name" value="" required
-                       minlength="3" maxlength="80"><br/>
-                <label class="form-label" for="sender-email">
-                    {% trans 'Email' %}
-                </label><br/>
-                <input class="form-field" id="sender-email" type="email" name="sender-email" value=""
-                       required minlength="3" maxlength="254"><br/>
-                <label class="form-label" for="sender-message">
-                    {% trans 'Wiadomość' %}
-                </label><br/>
-                <textarea class="form-field-textarea" name="sender-message" rows="5" cols="30" required
-                          minlength="3"></textarea>
+            <form class="form-flex-container" action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <h2 class="h2-write-us-medium ">{% trans 'Kontakt 3' %}</h2>
+                    <label class="form-label" for="sender-name">
+                        {% trans 'Imię i nazwisko' %}
+                    </label><br/>
+                    <input class="form-field" id="sender-name" type="text" name="sender-name" value="" required
+                           minlength="3" maxlength="80"><br/>
+                    <label class="form-label" for="sender-email">
+                        {% trans 'Email' %}
+                    </label><br/>
+                    <input class="form-field" id="sender-email" type="email" name="sender-email" value=""
+                           required minlength="3" maxlength="254"><br/>
+                    <label class="form-label" for="sender-message">
+                        {% trans 'Wiadomość' %}
+                    </label><br/>
+                    <textarea class="form-field-textarea" name="sender-message" rows="5" cols="30" required
+                              minlength="3"></textarea>
 
-                <!-- RODO -->
-                <div class="rodo-container">
-                    <input id="rodo" class="rodo-checkbox" type="checkbox" name="rodo-terms" value="True"
-                           required>
+                    <!-- RODO -->
+                    <div class="rodo-container">
+                        <input id="rodo" class="rodo-checkbox" type="checkbox" name="rodo-terms" value="True"
+                               required>
 
-                    <textarea class="rodo-text" rows="5" disabled>{% trans 'RODO' %}</textarea>
+                        <textarea class="rodo-text" rows="5" disabled>{% trans 'RODO' %}</textarea>
 
+                    </div>
+
+                </fieldset>
+                <div class="form-send-btn">
+                    <input class="button-gold-form" type="submit" value="{% trans 'Wyślij' %}">
                 </div>
 
-            </fieldset>
-            <div class="form-send-btn">
-                <input class="button-gold-form" type="submit" value="{% trans 'Wyślij' %}">
-            </div>
+            </form>
 
-        </form>
-
-        <div class="contact-data-container">
-            <div class="form-data-text">
-                <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> +48 601
-                    406 149</p>
-                <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/mail.png">
-                    cgajda@cg-consulting.pl</p>
-                <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/place.png">
-                    Marszałkowska 126/134<br/>
-                    <img class="form-data-icon" src="" width="21">
-                    {% trans '00-008 Warszawa' %}
-                </p>
+            <div class="contact-data-container">
+                <div class="form-data-text">
+                    <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> +48 601
+                        406 149</p>
+                    <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/mail.png">
+                        cgajda@cg-consulting.pl</p>
+                    <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/place.png">
+                        Marszałkowska 126/134<br/>
+                        <img class="form-data-icon" src="" width="21">
+                        {% trans '00-008 Warszawa' %}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 <!-- Map -->
-<div id="demoMap" class="map-style"></div>
-<script src={% static "/landing_page/osm/OpenLayers.js" %}></script>
-<script>
-    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-    var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-    var position = new OpenLayers.LonLat(21.00943, 52.23483).transform(fromProjection, toProjection);
-    var zoom = 18;
+    <div id="demoMap" class="map-style"></div>
+    <script src={% static "/landing_page/osm/OpenLayers.js" %}></script>
+    <script>
+        var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+        var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+        var position = new OpenLayers.LonLat(21.00943, 52.23483).transform(fromProjection, toProjection);
+        var zoom = 18;
 
-    map = new OpenLayers.Map("demoMap", {controls: []});
-    map.addLayer(new OpenLayers.Layer.OSM());
-    map.setCenter(position, zoom);
+        map = new OpenLayers.Map("demoMap", {controls: []});
+        map.addLayer(new OpenLayers.Layer.OSM());
+        map.setCenter(position, zoom);
 
-    var markers = new OpenLayers.Layer.Markers("Markers");
-    map.addLayer(markers);
-    markers.addMarker(new OpenLayers.Marker(position));
+        var markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+        markers.addMarker(new OpenLayers.Marker(position));
 
-    nav = new OpenLayers.Control.Navigation({'zoomWheelEnabled': false});
-    {#nav.disableZoomWheel()#}
-    map.addControl(nav);
+        nav = new OpenLayers.Control.Navigation({'zoomWheelEnabled': false});
+        {#nav.disableZoomWheel()#}
+        map.addControl(nav);
 
-    var panel = new OpenLayers.Control.Zoom();
-    map.addControl(panel);
+        var panel = new OpenLayers.Control.Zoom();
+        map.addControl(panel);
 
-</script>
+    </script>
 
-<hr class="gold-long">
+    <hr class="gold-long">
 
 <!-- Footer -->
-<div class="bg-alt">
-    <footer id="footer" class="site-margin footer-container">
+    <div class="bg-alt">
+        <footer id="footer" class="site-margin footer-container">
 
-        {#                <div class="filler-footer"></div>#}
+            <div class="footer-flex-data">
+                <!-- logo -->
+                <div class="footer-flex-item-logo">
+                    <a href="{% url 'home' %}">
+                        <img class="footer-logo-square" src="/media/logoCGC_square_color.svg" alt="logo CG-consulting">
+                        <!-- or long -->
+                        <img class="footer-logo-long" src="/media/logoCGC_long_color.svg" alt="logo CG-consulting">
+                    </a>
+                </div>
 
-        <div class="footer-flex-data">
-            <!-- logo -->
-            <div class="footer-flex-item-logo">
-                <a href="{% url 'home' %}">
-                    <img class="footer-logo-square" src="/media/logoCGC_square_color.svg" alt="logo CG-consulting">
-                    <!-- or long -->
-                    <img class="footer-logo-long" src="/media/logoCGC_long_color.svg" alt="logo CG-consulting">
-                </a>
+                <!-- contact info -->
+                <div class="footer-flex-item-info">
+                    <div class="contact-h2"><span class="color-gold">|</span>{% trans ' KONTAKT' %}</div>
+                    <div class="text-contact-footer">
+                        <p class="contact-p"><img class="contact-icon" src="/media/tel.png" alt="numer telefonu"> +48 111 222 333</p>
+                        <p class="contact-p"><img class="contact-icon" src="/media/mail.png" alt="e-mail"> hello@ronindevelopers.com</p>
+                        <p class="contact-p"><img class="contact-icon" src="/media/place.png" alt="adres"> Marszałkowska 126/134</p>
+                        <p class="contact-p p-waw">{% trans '00-008 Warszawa' %}</p>
+                    </div>
+                </div>
+
+                <!-- roadmap -->
+                <div class="footer-flex-item-map">
+                    <div class="contact-h3"><span class="color-gold">|</span>{% trans ' MAPA STRONY' %}</div>
+                    <p class="text-contact-map">
+                        <a class="menu-button" href="{% url 'home' %}">Start</a><br/>
+                        <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'Usługi' %}</a><br/>
+                        <a class="menu-button" href="{% url 'home' %}#zespol">{% trans 'Nasz zespół' %}</a><br/>
+                        <a class="menu-button" href="#">{% trans 'Kariera' %}</a><br/>
+                        <a class="menu-button" href="{% url 'home' %}#kontakt">{% trans 'Kontakt' %}</a><br/>
+                    </p>
+                </div>
+
             </div>
 
-            <!-- contact info -->
-            <div class="footer-flex-item-info">
-                <div class="contact-h2"><span class="color-gold">|</span>{% trans ' KONTAKT' %}</div>
-                <div class="text-contact-footer">
-                    <p class="contact-p"><img class="contact-icon" src="/media/tel.png" alt="numer telefonu"> +48 111 222 333</p>
-                    <p class="contact-p"><img class="contact-icon" src="/media/mail.png" alt="e-mail"> hello@ronindevelopers.com</p>
-                    <p class="contact-p"><img class="contact-icon" src="/media/place.png" alt="adres"> Marszałkowska 126/134</p>
-                    <p class="contact-p p-waw">{% trans '00-008 Warszawa' %}</p>
+            <!-- arrow up -->
+            <div class="footer-flex-right">
+                <div class="footer-flex-item-right">
+                    <a class="menu-button" href="{% url 'home' %}">
+                        <img class="v-up" src="/media/v-sign-up.svg" alt="wróć na start"/>
+                    </a>
+                    <a class="text-contact menu-button" href="{% url 'home' %}">{% trans 'Do góry' %}</a>
                 </div>
             </div>
 
-            <!-- roadmap -->
-            <div class="footer-flex-item-map">
-                <div class="contact-h3"><span class="color-gold">|</span>{% trans ' MAPA STRONY' %}</div>
-                <p class="text-contact-map">
-                    <a class="menu-button" href="{% url 'home' %}">Start</a><br/>
-                    <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'Usługi' %}</a><br/>
-                    <a class="menu-button" href="{% url 'home' %}#zespol">{% trans 'Nasz zespół' %}</a><br/>
-                    <a class="menu-button" href="#">{% trans 'Kariera' %}</a><br/>
-                    <a class="menu-button" href="{% url 'home' %}#kontakt">{% trans 'Kontakt' %}</a><br/>
-                </p>
-            </div>
-
-        </div>
-
-        <!-- arrow up -->
-        <div class="footer-flex-right">
-            <div class="footer-flex-item-right">
-                <a class="menu-button" href="{% url 'home' %}">
-                    <img class="v-up" src="/media/v-sign-up.svg" alt="wróć na start"/>
-                </a>
-                <a class="text-contact menu-button" href="{% url 'home' %}">{% trans 'Do góry' %}</a>
-            </div>
-        </div>
-
-    </footer>
-</div>
+        </footer>
+    </div>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="{% static "landing_page/js/carousel.js" %}"></script>
-<script src="{% static "landing_page/js/parallax/parallax.js" %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="{% static "landing_page/js/carousel.js" %}"></script>
+    <script src="{% static "landing_page/js/parallax/parallax.js" %}"></script>
+
+    <!-- Curtain Menu -->
+    <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+
 </body>
 </html>

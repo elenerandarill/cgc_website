@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-22 19:40+0100\n"
+"POT-Creation-Date: 2020-12-29 21:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,157 +20,181 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
+#: .\landing_page\templates\landing_page\home.html:40
+msgid "menu-home"
+msgstr "HOME"
+
+#: .\landing_page\templates\landing_page\home.html:41
+msgid "menu-2"
+msgstr "USŁUGI"
+
+#: .\landing_page\templates\landing_page\home.html:42
+msgid "menu-3"
+msgstr "NASZ ZESPÓŁ"
+
+#: .\landing_page\templates\landing_page\home.html:43
+msgid "menu-4"
+msgstr "KARIERA"
+
+#: .\landing_page\templates\landing_page\home.html:44
+msgid "menu-5"
+msgstr "KONTAKT"
+
 #: .\landing_page\templates\landing_page\home.html:45
+msgid "menu-lang"
+msgstr "ENGLISH"
+
+#: .\landing_page\templates\landing_page\home.html:76
 msgid "USŁUGI"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:46
+#: .\landing_page\templates\landing_page\home.html:79
 msgid "JAK DZIAŁAMY"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:48
+#: .\landing_page\templates\landing_page\home.html:84
 msgid "KLIENCI"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:49
+#: .\landing_page\templates\landing_page\home.html:87
 msgid "KONTAKT"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:60
+#: .\landing_page\templates\landing_page\home.html:100
 msgid "Inspiruj swój biznes"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:61
+#: .\landing_page\templates\landing_page\home.html:101
 msgid "i zaskocz konkurencję"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:65
+#: .\landing_page\templates\landing_page\home.html:105
 msgid ""
 "Jakiekolwiek wyzwanie biznesowe czy technologiczne masz, pomożemy rozwijać "
 "Twoją firmę."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:69
+#: .\landing_page\templates\landing_page\home.html:109
 msgid "Sprawdź ofertę"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:81
+#: .\landing_page\templates\landing_page\home.html:122
 msgid " NASZE USŁUGI"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:82
+#: .\landing_page\templates\landing_page\home.html:123
 msgid "Rozwiązania szyte na miarę"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:82
+#: .\landing_page\templates\landing_page\home.html:123
 msgid "dla Twojego biznesu"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:87
+#: .\landing_page\templates\landing_page\home.html:129
 msgid "Rozwój nowych produktów"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:89
+#: .\landing_page\templates\landing_page\home.html:131
 msgid ""
 "1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:94
+#: .\landing_page\templates\landing_page\home.html:138
 msgid "Rozwój działalności"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:96
+#: .\landing_page\templates\landing_page\home.html:140
 msgid ""
 "2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:103
+#: .\landing_page\templates\landing_page\home.html:149
 msgid ""
 "3 -  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:108
+#: .\landing_page\templates\landing_page\home.html:156
 msgid "Transformacja cyfrowa"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:110
+#: .\landing_page\templates\landing_page\home.html:158
 msgid ""
 "4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:115
+#: .\landing_page\templates\landing_page\home.html:165
 msgid "Usługi konsultacji"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:117
+#: .\landing_page\templates\landing_page\home.html:167
 msgid ""
 "5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:122
+#: .\landing_page\templates\landing_page\home.html:174
 msgid "Usługi IT"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:124
+#: .\landing_page\templates\landing_page\home.html:176
 msgid ""
 "6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:135
+#: .\landing_page\templates\landing_page\home.html:186
 msgid " JAK DZIAŁAMY"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:137
+#: .\landing_page\templates\landing_page\home.html:188
 msgid "Jak możesz usprawnić "
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:139
+#: .\landing_page\templates\landing_page\home.html:190
 msgid "Swój biznes"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:149
+#: .\landing_page\templates\landing_page\home.html:202
 msgid "Nawiązanie kontaktu "
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:151
+#: .\landing_page\templates\landing_page\home.html:204
 msgid "rozpoczęciem współpracy"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:155
+#: .\landing_page\templates\landing_page\home.html:208
 msgid ""
 "1a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:163
+#: .\landing_page\templates\landing_page\home.html:217
 msgid "Propozycja "
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:165
+#: .\landing_page\templates\landing_page\home.html:219
 msgid "działań"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:169
+#: .\landing_page\templates\landing_page\home.html:223
 msgid ""
 "2a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:177
+#: .\landing_page\templates\landing_page\home.html:232
 msgid "Stopniowe i sprawne "
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:179
+#: .\landing_page\templates\landing_page\home.html:234
 msgid "wdrożenie"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:183
+#: .\landing_page\templates\landing_page\home.html:238
 msgid "wdrozenie_text"
 msgstr ""
 "Stopniowe wdrażanie wybranych rozwiązań pozwala na potwierdzenie ich "
@@ -178,152 +202,166 @@ msgstr ""
 "Ponadto, zmniejsza ich koszt inicjalny, a stała współpraca wpływa na "
 "pozytywny rozwój projektu i identyfikację nowych obszarów współpracy."
 
-#: .\landing_page\templates\landing_page\home.html:193
+#: .\landing_page\templates\landing_page\home.html:252
 msgid "Horyzont czasowy"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:194
+#: .\landing_page\templates\landing_page\home.html:253
 msgid "(punkt odniesienia) 3-4 miesiące (zależy od zakresu)"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:203
+#: .\landing_page\templates\landing_page\home.html:263
 msgid "Dokumenty"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:204
+#: .\landing_page\templates\landing_page\home.html:264
 msgid "podpisanie NDA oraz umowy o współpracy"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:213
+#: .\landing_page\templates\landing_page\home.html:274
 msgid "Koszt"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:214
+#: .\landing_page\templates\landing_page\home.html:275
 msgid "Finansowanie konsultacji realizowane z wypracowanego zysku"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:237
+#: .\landing_page\templates\landing_page\home.html:308
+#: .\landing_page\templates\landing_page\home.html:399
 msgid "Raczkowanie"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:239
+#: .\landing_page\templates\landing_page\home.html:310
+#: .\landing_page\templates\landing_page\home.html:401
 msgid "MVP sprzedaż"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:240
+#: .\landing_page\templates\landing_page\home.html:311
+#: .\landing_page\templates\landing_page\home.html:402
 msgid "Wskazanie sukcesu"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:250
+#: .\landing_page\templates\landing_page\home.html:331
+#: .\landing_page\templates\landing_page\home.html:413
 msgid "Chodzenie"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:252
+#: .\landing_page\templates\landing_page\home.html:333
+#: .\landing_page\templates\landing_page\home.html:415
 msgid "Koncentracja na podstawach umożliwiających zwiększenie zysku"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:262
+#: .\landing_page\templates\landing_page\home.html:365
+#: .\landing_page\templates\landing_page\home.html:426
 msgid "Bieg"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:264
+#: .\landing_page\templates\landing_page\home.html:367
+#: .\landing_page\templates\landing_page\home.html:428
 msgid "Dalszy rozwój produktu"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:265
+#: .\landing_page\templates\landing_page\home.html:368
+#: .\landing_page\templates\landing_page\home.html:429
 msgid "Wprowadzenie nowych rozwiązań"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:266
+#: .\landing_page\templates\landing_page\home.html:369
+#: .\landing_page\templates\landing_page\home.html:430
 msgid "Poprawa wydajności"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:267
+#: .\landing_page\templates\landing_page\home.html:370
+#: .\landing_page\templates\landing_page\home.html:431
 msgid ""
 "Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści "
 "biznesowe"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:279
+#: .\landing_page\templates\landing_page\home.html:446
 msgid "Ile to kosztuje?"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:280
+#: .\landing_page\templates\landing_page\home.html:447
 msgid "Wynagrodzenie pochodzi z "
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:281
+#: .\landing_page\templates\landing_page\home.html:448
 msgid "utworzonego zysku"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:288
+#: .\landing_page\templates\landing_page\home.html:458
 msgid "Kontakt 1"
 msgstr "Skontaktuj się z nami"
 
-#: .\landing_page\templates\landing_page\home.html:296
+#: .\landing_page\templates\landing_page\home.html:468
 msgid " NASZ ZESPÓŁ"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:297
+#: .\landing_page\templates\landing_page\home.html:469
 msgid "Kim jesteśmy?"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:306
+#: .\landing_page\templates\landing_page\home.html:479
 msgid ""
 "Cyprian - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do "
 "eiusmod tempor incididunt ut labore et dolor."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:315
+#: .\landing_page\templates\landing_page\home.html:489
 msgid ""
 "Joanna -Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do "
 "eiusmod tempor incididunt ut labore et dolor."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:324
+#: .\landing_page\templates\landing_page\home.html:499
 msgid ""
 "Aleksander - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do "
 "eiusmod tempor incididunt ut labore et dolor."
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:331
+#: .\landing_page\templates\landing_page\home.html:506
 msgid " NASI KLIENCI"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:335
+#: .\landing_page\templates\landing_page\home.html:510
 msgid "+7 lat "
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:337
+#: .\landing_page\templates\landing_page\home.html:512
 msgid "inspirującej działalności "
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:339
+#: .\landing_page\templates\landing_page\home.html:514
 msgid "z markami własnymi, firmami i projektami powierzonymi"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:399
-#: .\landing_page\templates\landing_page\home.html:490
+#: .\landing_page\templates\landing_page\home.html:712
+#: .\landing_page\templates\landing_page\home.html:815
 msgid " KONTAKT"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:400
+#: .\landing_page\templates\landing_page\home.html:713
 msgid "Kontakt 2"
 msgstr "Skontaktuj się z nami"
 
-#: .\landing_page\templates\landing_page\home.html:409
+#: .\landing_page\templates\landing_page\home.html:721
+msgid "Kontakt 3"
+msgstr "Napisz do nas"
+
+#: .\landing_page\templates\landing_page\home.html:723
 msgid "Imię i nazwisko"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:413
+#: .\landing_page\templates\landing_page\home.html:728
 msgid "Email"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:417
+#: .\landing_page\templates\landing_page\home.html:733
 msgid "Wiadomość"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:425
+#: .\landing_page\templates\landing_page\home.html:743
 msgid "RODO"
 msgstr ""
 "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia mi "
@@ -336,39 +374,35 @@ msgstr ""
 "prowadzonego przez Sąd Rejonowy w ??? pod numerem KRS 0000794990, NIP "
 "9532769007, REGON 383889583."
 
-#: .\landing_page\templates\landing_page\home.html:431
+#: .\landing_page\templates\landing_page\home.html:749
 msgid "Wyślij"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:437
-msgid "Kontakt 3"
-msgstr "Napisz do nas"
-
-#: .\landing_page\templates\landing_page\home.html:443
-#: .\landing_page\templates\landing_page\home.html:495
+#: .\landing_page\templates\landing_page\home.html:763
+#: .\landing_page\templates\landing_page\home.html:820
 msgid "00-008 Warszawa"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:501
+#: .\landing_page\templates\landing_page\home.html:826
 msgid " MAPA STRONY"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:504
+#: .\landing_page\templates\landing_page\home.html:829
 msgid "Usługi"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:505
+#: .\landing_page\templates\landing_page\home.html:830
 msgid "Nasz zespół"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:506
+#: .\landing_page\templates\landing_page\home.html:831
 msgid "Kariera"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:507
+#: .\landing_page\templates\landing_page\home.html:832
 msgid "Kontakt"
 msgstr ""
 
-#: .\landing_page\templates\landing_page\home.html:518
+#: .\landing_page\templates\landing_page\home.html:844
 msgid "Do góry"
 msgstr ""

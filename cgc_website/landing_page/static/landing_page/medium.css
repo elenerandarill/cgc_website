@@ -27,6 +27,10 @@ div.basic-flex-container-workflow {
 .arrow-story-container {
     display: none;
 }
+                                /* --- Arrow Carousel - wisible below 1081px --- */
+#carousel__slide2 {
+    display: flex;
+}
 
 
  /* -------------------------------------- Form */

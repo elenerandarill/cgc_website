@@ -16,6 +16,10 @@ body {
 
 
                                 /* --- Navigation bar with logo --- */
+#myNav {
+    display: none;
+}
+
 #navbar-sm-scr {
   display: none;
 }
@@ -377,6 +381,10 @@ ul {
 }
 
                                 /* --- Arrow Carousel - wisible below 1081px --- */
+#carousel__slide2 {
+    display: none;
+}
+
 .carousel-root {
     display: flex;
     flex-flow: row nowrap; /* Don't wrap the arrows */

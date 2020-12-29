@@ -11,7 +11,7 @@
   justify-content: space-between;
   background-color: #FFFFFF;
   overflow: hidden;
-  z-index: 100;
+  z-index: 10;
 }
 /* navigation for bigger screens */
 .navbar-flex-container {
@@ -42,17 +42,22 @@
 
 .bars-style {
     align-items: start;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
 }
 
 .bars-style:link, .bars-style:visited {
-  text-decoration: none;
-  font-size: 30px;
-  color: black;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
 }
 .bars-style:hover, .bars-style:active {
-  text-decoration: none;
-  font-size: 30px;
-  color: #C99C54;
+    text-decoration: none;
+    font-size: 30px;
+    color: #C99C54;
+    cursor: pointer;
 }
 
 /* -------------------------------------- Black box container */
@@ -215,6 +220,10 @@ p.team {
     height: 158px;
     width: 158px;
 }
+                                /* --- Arrow Carousel - wisible below 1081px --- */
+#carousel__slide2 {
+    display: flex;
+}
 
                                 /* --- Clients Logos --- */
 .logos-all-visible {
@@ -245,24 +254,9 @@ p.team {
 }
 
                                 /* --- Contact Form --- */
-/*.contact-flex-container {*/
-/*    display: flex;*/
-/*    flex-flow: row wrap;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*    padding-bottom: 30px;*/
-
-/*    background: #F6F6F6;*/
-/*    !*border: 1px black solid;*!*/
-/*}*/
 .contact-data-container {
-    /*justify-content: center;*/
-    /*align-items: flex-start;*/
-    /*flex-grow: 1;*/
     height: 100%;
     margin-top: 30px;
-
-    /*border: 1px black solid;*/
 }
 
 .form-data-text {
@@ -359,5 +353,58 @@ p.team {
     min-width: 142px;
 }
 
+
+                                /* --- Curtain menu --- */
+#myNav {
+    display: block;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: #C99C54;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #156E7A;
+}
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  /*top: 20px;*/
+  right: 20px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
 
 
