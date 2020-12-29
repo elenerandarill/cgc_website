@@ -270,10 +270,10 @@
 <!-- ****** Arrow Carousel - visible for MEDIUM and SMALL screens ****** -->
 
     <!-- Container for the image gallery -->
-    <div id="carousel__slide2" class="container-slideshow">
+    <div id="carousel__slide2" class="carousel-root container-slideshow">
 
         <!-- First arrow part -->
-        <div class="mySlides">
+        <div class="carousel-item">
             <div class="small-story-arrow-container">
                 <div class="arrow-story-line-middle">
                     <img src="/media/arrow-line.png" class="arrow-middle-part"/>
@@ -296,7 +296,7 @@
         </div>
 
         <!-- Second arrow part -->
-        <div class="mySlides">
+        <div class="carousel-item">
             <div class="small-story-arrow-container">
                 <div class="arrow-story-line-middle">
                     <img src="/media/arrow-line.png" class="arrow-middle-part"/>
@@ -318,7 +318,7 @@
         </div>
 
         <!-- Third arrow part -->
-        <div class="mySlides">
+        <div class="carousel-item">
 
             <div class="small-story-arrow-container">
                 <img src="/media/arrow-line.png" width="24px" height="119px"/>
@@ -356,39 +356,11 @@
         </div>
 
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides('carousel__slide2', -1)">&#10094;</a>
+        <a class="next" onclick="plusSlides('carousel__slide2', 1)">&#10095;</a>
 
     </div>
 
-    <!-- Script for the Carousel -->
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
 <!-- ****** ****** ****** -->
 
 <!-- ****** Arrow Static Graphic - visible for BIG screens ****** -->
@@ -773,6 +745,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
+<script src="{% static "landing_page/js/carousel.js" %}"></script>
 <script src="{% static "landing_page/js/parallax/parallax.min.js" %}"></script>
 </body>
 </html>

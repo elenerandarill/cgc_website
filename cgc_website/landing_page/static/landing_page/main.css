@@ -388,7 +388,7 @@ ul {
 }
 
 /* Hide the images by default */
-.mySlides {
+.carousel-item {
   display: none;
 }
 .slide-inner {
