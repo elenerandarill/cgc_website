@@ -30,6 +30,9 @@ function showSlides(carouselId, n) {
         slides[i].style.display = "none";
     }
     slides[n].style.display = "block";
+
+    // Dirty hack for parallax windows to fix their positions
+    jQuery(window).trigger('resize').trigger('scroll');
 }
 
 function showFirstSlideOnEachCarousel() {
@@ -40,5 +43,5 @@ function showFirstSlideOnEachCarousel() {
     }
 }
 
-// window.addEventListener("load", showFirstSlideOnEachCarousel);
-showFirstSlideOnEachCarousel()
+window.addEventListener("load", showFirstSlideOnEachCarousel);
+// showFirstSlideOnEachCarousel()

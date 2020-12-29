@@ -377,19 +377,20 @@ ul {
 }
 
                                 /* --- Arrow Carousel - wisible below 1081px --- */
+.carousel-root {
+    display: flex;
+    flex-flow: row nowrap; /* Don't wrap the arrows */
+    /*justify-content: space-between;*/
+}
+.carousel-items {
+    flex-grow: 1;
+}
+.carousel-item {
+  display: none; /* Hide the images by default */
+}
 .small-story-arrow-container {
     display: flex;
     flex-wrap: nowrap;
-}
-/* Position the image container (needed to position the left and right arrows) */
-.container-slideshow {
-  position: relative;
-    display: none;
-}
-
-/* Hide the images by default */
-.carousel-item {
-  display: none;
 }
 .slide-inner {
     max-width: 400px;
@@ -414,27 +415,19 @@ a.prev:hover, a.next:hover {
 /* Next & previous buttons */
 .prev,
 .next {
-  text-decoration: none;
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: #C99C54;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto;
+    margin-top: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #C99C54;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  /*border-radius: 3px 0 0 3px;*/
-}
-
 
 
                                 /* --- Arrow Story Layout - wisible only above 1080px! --- */

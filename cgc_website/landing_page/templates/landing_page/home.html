@@ -270,93 +270,97 @@
 <!-- ****** Arrow Carousel - visible for MEDIUM and SMALL screens ****** -->
 
     <!-- Container for the image gallery -->
-    <div id="carousel__slide2" class="carousel-root container-slideshow">
+    <div id="carousel__slide2" class="carousel-root" style="min-height: 300px">
 
-        <!-- First arrow part -->
-        <div class="carousel-item">
-            <div class="small-story-arrow-container">
-                <div class="arrow-story-line-middle">
-                    <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+        <a class="prev" onclick="plusSlides('carousel__slide2', -1)">&#10094;</a>
+
+        <div class="carousel-items">
+
+            <!-- First arrow part -->
+            <div class="carousel-item">
+                <div class="small-story-arrow-container">
+                    <div class="arrow-story-line-middle">
+                        <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                    </div>
+
+                    <img src="/media/arrow-first-mid.png" class="arrow-img-narrow"/>
+
+                    <div class="arrow-story-line">
+                        <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                    </div>
                 </div>
-
-                <img src="/media/arrow-first-mid.png" class="arrow-img-narrow"/>
-
-                <div class="arrow-story-line">
-                    <img src="/media/arrow-line.png" class="arrow-middle-part"/>
-                </div>
-            </div>
-            <!-- Text -->
-            <div class="slide-inner">
-                <h4>{% trans 'Raczkowanie' %}</h4>
-                <ul class="text-list">
-                    <li>{% trans 'MVP sprzedaż' %}</li>
-                    <li>{% trans 'Wskazanie sukcesu' %}</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Second arrow part -->
-        <div class="carousel-item">
-            <div class="small-story-arrow-container">
-                <div class="arrow-story-line-middle">
-                    <img src="/media/arrow-line.png" class="arrow-middle-part"/>
-                </div>
-
-                <img src="/media/arrow-second-mid.png" class="arrow-img-narrow"/>
-
-                <div class="arrow-story-line">
-                    <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                <!-- Text -->
+                <div class="slide-inner">
+                    <h4>{% trans 'Raczkowanie' %}</h4>
+                    <ul class="text-list">
+                        <li>{% trans 'MVP sprzedaż' %}</li>
+                        <li>{% trans 'Wskazanie sukcesu' %}</li>
+                    </ul>
                 </div>
             </div>
-            <!-- Text -->
-            <div class="slide-inner">
-                <h4>{% trans 'Chodzenie' %}</h4>
-                <ul class="text-list">
-                    <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
-                </ul>
+
+            <!-- Second arrow part -->
+            <div class="carousel-item">
+                <div class="small-story-arrow-container">
+                    <div class="arrow-story-line-middle">
+                        <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                    </div>
+
+                    <img src="/media/arrow-second-mid.png" class="arrow-img-narrow"/>
+
+                    <div class="arrow-story-line">
+                        <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                    </div>
+                </div>
+                <!-- Text -->
+                <div class="slide-inner">
+                    <h4>{% trans 'Chodzenie' %}</h4>
+                    <ul class="text-list">
+                        <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <!-- Third arrow part -->
-        <div class="carousel-item">
+            <!-- Third arrow part -->
+            <div class="carousel-item">
 
-            <div class="small-story-arrow-container">
-                <img src="/media/arrow-line.png" width="24px" height="119px"/>
-               <div class="arrow-story-line-middle">
-                   <img src="/media/arrow-line.png" class="arrow-middle-part"/>
-               </div>
-                <div class="arrow-story-line-middle">
-                   <img src="/media/arrow-line.png" class="arrow-middle-part"/>
-               </div>
+                <div class="small-story-arrow-container">
+                    <img src="/media/arrow-line.png" width="24px" height="119px"/>
+                   <div class="arrow-story-line-middle">
+                       <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                   </div>
+                    <div class="arrow-story-line-middle">
+                       <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                   </div>
 
-                <img src="/media/arrow-third-mid.png" class="arrow-img-narrow"/>
+                    <img src="/media/arrow-third-mid.png" class="arrow-img-narrow"/>
 
-                <div class="arrow-story-line">
-                    <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                    <div class="arrow-story-line">
+                        <img src="/media/arrow-line.png" class="arrow-middle-part"/>
+                    </div>
+
+                    <div class="arrow-story-line arrow-dashed" style="background-image: url('/media/arrow-pattern-dashed.png')">
+                    </div>
+
+                    <img src="/media/arrow-end.png" width="24px"/>
+
+
+                </div>
+                <!-- Text -->
+                <div class="slide-inner">
+                    <h4>{% trans 'Bieg' %}</h4>
+                    <ul class="text-list">
+                        <li>{% trans 'Dalszy rozwój produktu' %}</li>
+                        <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
+                        <li>{% trans 'Poprawa wydajności' %}</li>
+                        <li>{% trans 'Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe' %}</li>
+                    </ul>
                 </div>
 
-                <div class="arrow-story-line arrow-dashed" style="background-image: url('/media/arrow-pattern-dashed.png')">
-                </div>
-
-                <img src="/media/arrow-end.png" width="24px"/>
-
-
             </div>
-            <!-- Text -->
-            <div class="slide-inner">
-                <h4>{% trans 'Bieg' %}</h4>
-                <ul class="text-list">
-                    <li>{% trans 'Dalszy rozwój produktu' %}</li>
-                    <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
-                    <li>{% trans 'Poprawa wydajności' %}</li>
-                    <li>{% trans 'Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe' %}</li>
-                </ul>
-            </div>
-
         </div>
 
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides('carousel__slide2', -1)">&#10094;</a>
         <a class="next" onclick="plusSlides('carousel__slide2', 1)">&#10095;</a>
 
     </div>
@@ -746,6 +750,6 @@
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
 <script src="{% static "landing_page/js/carousel.js" %}"></script>
-<script src="{% static "landing_page/js/parallax/parallax.min.js" %}"></script>
+<script src="{% static "landing_page/js/parallax/parallax.js" %}"></script>
 </body>
 </html>
