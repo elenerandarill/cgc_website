@@ -1,7 +1,11 @@
+.bg-button-color {
+    background: #F6F6F6;
+}
+
 /* --- For screens up to 600px wide ---*/
 
 /* -------------------------------------- Style the navbar */
-#navbar-small-screen {
+#navbar-sm-scr {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +33,7 @@
   padding-top: 60px;
 }
 
-.nvb-small-scr-container {
+.nvb-sm-scr-container {
   height: 50px;
   width: 100%;
   padding: 12px 23px;
@@ -37,16 +41,181 @@
 }
 
 .bars-style {
-  text-decoration: none;
-  font-size: 30px;
-  color: #121212;
+    align-items: start;
 }
 
 .bars-style:link, .bars-style:visited {
   text-decoration: none;
+  font-size: 30px;
+  color: black;
 }
 .bars-style:hover, .bars-style:active {
   text-decoration: none;
   font-size: 30px;
   color: #C99C54;
 }
+
+/* -------------------------------------- Black box container */
+.parallax-window {
+    min-height: 565px;
+}
+.parallax-window-narrow {
+    min-height: 250px;
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.black-box {
+    justify-content: center;
+    min-height: 265px;
+    /*max-width: 764px;*/
+
+    position: relative;
+    top: 300px;
+}
+.black-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+    min-height: 265px;
+    padding: 0;
+}
+
+.black-flex-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+    max-width: 380px;
+}
+
+                                /* --- Text --- */
+.text-title {
+    font-family: "Segoe UI, Bold", "Arial", sans-serif;
+    text-align: center;
+    color: black;
+    line-height: 33px;
+}
+.text-list {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+
+h1 {
+    font-size: 25px;
+}
+h2 {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+h3 {
+    font-size: 20px;
+    line-height: 25px;
+
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+
+    margin-bottom: 12px;
+}
+
+                                /* --- Lines hr and Lists --- */
+.gold-4px {
+    height: 2px;
+}
+.gold-2px {
+    height: 1px;
+    width: 158px;
+    margin: 5px auto;
+}
+
+p.text-plain {
+    font-size: 16px;
+    line-height: 21px;
+}
+p.text-plain-white {
+    font-size: 17px;
+    text-align: center;
+}
+
+
+                                /* --- Actions Side Layout --- */
+.actions-side-container {
+    max-width: 340px;
+}
+.actions-side-item {
+    margin: 0 0 20px 5px;
+}
+.actions-side-image {
+    width: 35px;
+}
+.slide-inner {
+    max-width: 350px;
+    min-height: 150px;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+                                /* --- Light Gray Title --- */
+
+.text-flex-item-right {
+    line-height: 27px;
+}
+
+
+                                /* --- Gold button --- */
+
+.button-gold {
+    font-size: 16px;
+    padding: 4px 12px;
+}
+.button-gold-flex-containter {
+    padding-top: 20px;
+    padding-bottom: 55px;
+    height: 40px;
+}
+
+                                /* --- Team ---*/
+.team-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    max-width: 326px;
+    margin-top: 50px;
+}
+
+h4.team {
+    font-size: 20px;
+    line-height: 27px;
+    padding-top: 20px;
+}
+h4.team-gold {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 23px;
+
+    margin-top: 6px;
+    margin-bottom: 13px;
+}
+p.team {
+    font-size: 16px;
+    line-height: 20px;
+
+    padding: 0 10px 0 10px;
+}
+.team-img {
+    height: 158px;
+    width: 158px;
+}
+
+
+
+

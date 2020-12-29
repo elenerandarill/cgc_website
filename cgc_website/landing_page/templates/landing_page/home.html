@@ -27,247 +27,247 @@
     <title>CGConsulting</title>
 
     <link rel="icon" type="image/png" href="/media/favicon.png"/>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
 
 
 <body>
 
+<!-- ****** Navbar sticky - visible for SMALL screens ****** -->
 
-    <!-- Navbar sticky for small screens -->
-
-
-    <div id="navbar-small-screen" class=" nvb-small-scr-container site-margin">
+    <div id="navbar-sm-scr" class=" nvb-sm-scr-container site-margin sticky">
         <a href="{% url 'home' %}">
             <img src="/media/logoCGC_long_color.svg" alt="logo CGC" width="157"/>
         </a>
-        <a href="{% url 'home' %}" class="fas fa-bars bars-style"></a>
+        <a href="{% url 'home' %}" class="bars-style">&#9776;</a>
     </div>
+<!-- ******  ******  ******  -->
 
 
-    <script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {myFunction()};
+<!-- ****** Navbar - visible for BIG and MEDIUM screens ****** -->
+    <header id="start" class="site-margin navbar-flex-container">
 
-        // Get the navbar
-        var navbar = document.getElementById("navbar-small-screen");
-
-        // Get the offset position of the navbar
-        var sticky = navbar.offsetTop;
-
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-    </script>
-
-        <!-- Navbar for bigger screens -->
-<header id="start" class="site-margin navbar-flex-container">
-
-    <!-- Navbar logo -->
-    <div class="navbar-logo-flex-container">
-        <div class="navbar-logo-flex-item">
-            <a href="{% url 'home' %}">
-                <img src="/media/logoCGC_long_color.svg" alt="logo CGC" width="299"/>
-            </a>
+            <!-- Navbar logo -->
+        <div class="navbar-logo-flex-container">
+            <div class="navbar-logo-flex-item">
+                <a href="{% url 'home' %}">
+                    <img src="/media/logoCGC_long_color.svg" alt="logo CGC" width="299"/>
+                </a>
+            </div>
         </div>
-    </div>
-    <!-- Navbar menu -->
-    <div class="navbar-menu-flex-container">
-        <div class="navbar-button-flex-item"><a class="menu-button" href="#start">START</a></div>
-        <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
-                                                                     href="{% url 'home' %}#uslugi">{% trans 'USŁUGI' %}</a>
+            <!-- Navbar menu -->
+        <div class="navbar-menu-flex-container">
+            <div class="navbar-button-flex-item"><a class="menu-button" href="#start">START</a></div>
+            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
+                                                                         href="{% url 'home' %}#uslugi">{% trans 'USŁUGI' %}</a>
+            </div>
+            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
+                                                                         href="{% url 'home' %}#jak_dzialamy">{% trans 'JAK DZIAŁAMY' %}</a>
+            </div>
+            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#zespol">TEAM</a>
+            </div>
+            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
+                                                                         href="{% url 'home' %}#klienci">{% trans 'KLIENCI' %}</a>
+            </div>
+            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button-kontakt"
+                                                                         href="{% url 'home' %}#kontakt">{% trans 'KONTAKT' %}</a>
+            </div>
+            <div class="navbar-button-flex-item"><a class="menu-button" href="{{ lang_href }}">{{ lang_next }}</a></div>
         </div>
-        <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
-                                                                     href="{% url 'home' %}#jak_dzialamy">{% trans 'JAK DZIAŁAMY' %}</a>
-        </div>
-        <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#zespol">TEAM</a>
-        </div>
-        <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
-                                                                     href="{% url 'home' %}#klienci">{% trans 'KLIENCI' %}</a>
-        </div>
-        <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button-kontakt"
-                                                                     href="{% url 'home' %}#kontakt">{% trans 'KONTAKT' %}</a>
-        </div>
-        <div class="navbar-button-flex-item"><a class="menu-button" href="{{ lang_href }}">{{ lang_next }}</a></div>
-    </div>
-</header>
+    </header>
 
+    <div class="parallax-window" data-parallax="scroll" data-image-src="/media/turbine.jpg" data-position-y="-100px">
+<!-- Czarny obszar na turbinie - Black box -->
+        <div class="black-box">
+            <div class="site-margin">
+                <div class="black-flex-container">
 
-<div class="parallax-window" data-parallax="scroll" data-image-src="/media/turbine.jpg" data-position-y="-100px">
+                    <div class="text-title black-flex-item">
+                        <h1 class="color-white">{% trans 'Inspiruj swój biznes' %}</h1>
+                        <h1 class="color-gold">{% trans 'i zaskocz konkurencję' %}</h1>
+                    </div>
 
-    <!-- Black box -->
-    <div class="black-flex-container">
-        <div class="black-flex-item text-title">
-            <h1 class="color-white">{% trans 'Inspiruj swój biznes' %}</h1>
-            <h1 class="color-gold">{% trans 'i zaskocz konkurencję' %}</h1>
-        </div>
+                    <div class="black-flex-item">
+                        <p class="text-plain text-plain-white ">{% trans 'Jakiekolwiek wyzwanie biznesowe czy technologiczne masz, pomożemy rozwijać Twoją firmę.' %}</p>
+                    </div>
 
-        <div class="black-flex-item">
-            <p class="text-plain text-plain-white ">{% trans 'Jakiekolwiek wyzwanie biznesowe czy technologiczne masz, pomożemy rozwijać Twoją firmę.' %}</p>
-        </div>
-
-        <div class="black-flex-item">
-            <a href="#uslugi" class="button-gold menu-button-gold">{% trans 'Sprawdź ofertę' %}</a>
+                    <div class="black-flex-item">
+                        <a href="#uslugi" class="button-gold menu-button-gold">{% trans 'Sprawdź ofertę' %}</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-</div>
-
-<a href="#uslugi">
-    <img class="v-down" src="/media/v-sign.png" width="26px"/>
-</a>
+    <a href="#uslugi">
+        <img class="v-down" src="/media/v-sign-down.svg" alt="przejdź dalej">
+    </a>
 
 
-<!-- Services part -->
-<h3 class="site-margin" id="uslugi"><b class="color-gold">|</b>{% trans ' NASZE USŁUGI' %}</h3>
-<h2 class="site-margin">{% trans 'Rozwiązania szyte na miarę' %}<br/> {% trans 'dla Twojego biznesu' %}</h2>
+<!-- Our Services - Nasze Usługi -->
+    <h3 class="site-margin" id="uslugi"><b class="color-gold">|</b>{% trans ' NASZE USŁUGI' %}</h3>
+    <h2 class="site-margin">{% trans 'Rozwiązania szyte na miarę' %}<br/> {% trans 'dla Twojego biznesu' %}</h2>
 
-<div class="basic-flex-container-services site-margin">
-    <div class="services-item">
-        <hr class="gold-4px">
-        <h4>{% trans 'Rozwój nowych produktów' %}</h4>
-        <p class="text-plain">
-            {% trans '1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-        </p>
+    <div class="basic-flex-container-services site-margin">
+        <!-- 01 -->
+        <div class="services-item">
+            <hr class="gold-4px">
+            <h4>{% trans 'Rozwój nowych produktów' %}</h4>
+            <p class="text-plain">
+                {% trans '1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+            </p>
+        </div>
+
+        <!-- 02 -->
+        <div class="services-item">
+            <hr class="gold-4px">
+            <h4>{% trans 'Rozwój działalności' %}</h4>
+            <p class="text-plain">
+                {% trans '2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+            </p>
+        </div>
+
+        <!-- 03 -->
+        <div class="services-item">
+            <hr class="gold-4px">
+            <h4>Outsourcing</h4>
+            <p class="text-plain">
+                {% trans '3 -  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+            </p>
+        </div>
+
+        <!-- 04 -->
+        <div class="services-item">
+            <hr class="gold-4px">
+            <h4>{% trans 'Transformacja cyfrowa' %}</h4>
+            <p class="text-plain">
+                {% trans '4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+            </p>
+        </div>
+
+        <!-- 05 -->
+        <div class="services-item">
+            <hr class="gold-4px">
+            <h4>{% trans 'Usługi konsultacji' %}</h4>
+            <p class="text-plain">
+                {% trans '5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+            </p>
+        </div>
+
+        <!-- 06 -->
+        <div class="services-item">
+            <hr class="gold-4px">
+            <h4>{% trans 'Usługi IT' %}</h4>
+            <p class="text-plain">
+                {% trans '6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+            </p>
+        </div>
     </div>
-    <div class="services-item">
-        <hr class="gold-4px">
-        <h4>{% trans 'Rozwój działalności' %}</h4>
-        <p class="text-plain">
-            {% trans '2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-        </p>
-    </div>
-    <div class="services-item">
-        <hr class="gold-4px">
-        <h4>Outsourcing</h4>
-        <p class="text-plain">
-            {% trans '3 -  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-        </p>
-    </div>
-    <div class="services-item">
-        <hr class="gold-4px">
-        <h4>{% trans 'Transformacja cyfrowa' %}</h4>
-        <p class="text-plain">
-            {% trans '4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-        </p>
-    </div>
-    <div class="services-item">
-        <hr class="gold-4px">
-        <h4>{% trans 'Usługi konsultacji' %}</h4>
-        <p class="text-plain">
-            {% trans '5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-        </p>
-    </div>
-    <div class="services-item">
-        <hr class="gold-4px">
-        <h4>{% trans 'Usługi IT' %}</h4>
-        <p class="text-plain">
-            {% trans '6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-        </p>
-    </div>
-</div>
 
 <!-- parallax Blue -->
-<div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/spaceship.jpg"></div>
+    <div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/spaceship.jpg"></div>
 
 
-<!-- Workflow part -->
-<h3 class="site-margin" id="jak_dzialamy"><b class="color-gold">|</b>{% trans ' JAK DZIAŁAMY' %}</h3>
-<h2 class="site-margin">
-    {% trans 'Jak możesz usprawnić ' %}<br/>
-    <span class="color-gold">
-                    {% trans 'Swój biznes' %}
-                </span>
-</h2>
+<!-- Jak działamy - Our Workflow -->
+    <h3 class="site-margin" id="jak_dzialamy"><b class="color-gold">|</b>{% trans ' JAK DZIAŁAMY' %}</h3>
+    <h2 class="site-margin">
+        {% trans 'Jak możesz usprawnić ' %}<br/>
+        <span class="color-gold">
+            {% trans 'Swój biznes' %}
+        </span>
+    </h2>
 
-<div class="basic-flex-container-workflow site-margin">
-    <div class="basic-flex-container-left">
-        <div class="services-item services-item-actions">
-            <hr class="gold-4px">
-            <h4>
-                <span class="color-gold">1. </span>
-                {% trans 'Nawiązanie kontaktu ' %}<br/>
-                <span class="color-gold">
-                                {% trans 'rozpoczęciem współpracy' %}
-                            </span>
-            </h4>
-            <p class="text-plain">
-                {% trans '1a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
+    <div class="basic-flex-container-workflow site-margin">
+        <div class="basic-flex-container-left">
+
+            <!-- 01 -->
+            <div class="services-item services-item-actions">
+                <hr class="gold-4px">
+                <h4>
+                    <span class="color-gold">1. </span>
+                    {% trans 'Nawiązanie kontaktu ' %}<br/>
+                    <span class="color-gold">
+                                    {% trans 'rozpoczęciem współpracy' %}
+                                </span>
+                </h4>
+                <p class="text-plain">
+                    {% trans '1a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                </p>
+            </div>
+
+            <!-- 02 -->
+            <div class="services-item services-item-actions">
+                <hr class="gold-4px">
+                <h4>
+                    <span class="color-gold">2. </span>
+                    {% trans 'Propozycja ' %}
+                    <span class="color-gold">
+                                    {% trans 'działań' %}
+                                </span>
+                </h4>
+                <p class="text-plain">
+                    {% trans '2a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
+                </p>
+            </div>
+
+            <!-- 03 -->
+            <div class="services-item services-item-long">
+                <hr class="gold-4px">
+                <h4>
+                    <span class="color-gold">3. </span>
+                    {% trans 'Stopniowe i sprawne ' %}
+                    <span class="color-gold">
+                                    {% trans 'wdrożenie' %}
+                                </span>
+                </h4>
+                <p class="text-plain">
+                    {% trans 'wdrozenie_text' %}
+                </p>
+            </div>
         </div>
 
-        <div class="services-item services-item-actions">
-            <hr class="gold-4px">
-            <h4>
-                <span class="color-gold">2. </span>
-                {% trans 'Propozycja ' %}
-                <span class="color-gold">
-                                {% trans 'działań' %}
-                            </span>
-            </h4>
-            <p class="text-plain">
-                {% trans '2a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
-        </div>
+        <!-- Ikony z opisami - icons with text -->
+        <div class="basic-flex-container-right">
+            <div class="services-item actions-side-container">
 
-        <div class="services-item services-item-long">
-            <hr class="gold-4px">
-            <h4>
-                <span class="color-gold">3. </span>
-                {% trans 'Stopniowe i sprawne ' %}
-                <span class="color-gold">
-                                {% trans 'wdrożenie' %}
-                            </span>
-            </h4>
-            <p class="text-plain">
-                {% trans 'wdrozenie_text' %}
-            </p>
+                <!-- time -->
+                <div class="actions-side-item">
+                    <img class="actions-side-image" src="/media/ikona_czas.svg" alt="ikona zegarka">
+                    <div>
+                        <p class="text-plain">
+                            <b>{% trans "Horyzont czasowy" %}</b><br/>
+                            {% trans '(punkt odniesienia) 3-4 miesiące (zależy od zakresu)' %}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- docs -->
+                <div class="actions-side-item">
+                    <img class="actions-side-image" src="/media/ikona_dokumenty.svg" width="55px" alt="ikona dokumentów">
+                    <div>
+                        <p class="text-plain">
+                            <b>{% trans 'Dokumenty' %}</b><br/>
+                            {% trans 'podpisanie NDA oraz umowy o współpracy' %}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- coins -->
+                <div class="actions-side-item">
+                    <img class="actions-side-image" src="/media/ikona_pieniądze.svg" width="55px">
+                    <div>
+                        <p class="text-plain">
+                            <b>{% trans 'Koszt' %}</b><br/>
+                            {% trans 'Finansowanie konsultacji realizowane z wypracowanego zysku' %}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-    <div class="basic-flex-container-right">
-        <div class="services-item actions-side-container">
-            <div class="actions-side-item">
-                <img class="actions-side-image" src="/media/ikona_czas.svg" alt="ikona zegarka">
-                <div>
-                    <p class="text-plain">
-                        <b>{% trans "Horyzont czasowy" %}</b><br/>
-                        {% trans '(punkt odniesienia) 3-4 miesiące (zależy od zakresu)' %}
-                    </p>
-                </div>
-            </div>
 
-            <div class="actions-side-item">
-                <img class="actions-side-image" src="/media/ikona_dokumenty.svg" width="55px" alt="ikona dokumentów">
-                <div>
-                    <p class="text-plain">
-                        <b>{% trans 'Dokumenty' %}</b><br/>
-                        {% trans 'podpisanie NDA oraz umowy o współpracy' %}
-                    </p>
-                </div>
-            </div>
-
-            <div class="actions-side-item">
-                <img class="actions-side-image" src="/media/ikona_pieniądze.svg" width="55px">
-                <div>
-                    <p class="text-plain">
-                        <b>{% trans 'Koszt' %}</b><br/>
-                        {% trans 'Finansowanie konsultacji realizowane z wypracowanego zysku' %}
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-<!-- Arrow Carousel - only visible on medium in smaller screens -->
+<!-- ****** Arrow Carousel - visible for MEDIUM and SMALL screens ****** -->
 
     <!-- Container for the image gallery -->
     <div id="carousel__slide2" class="container-slideshow">
@@ -288,14 +288,14 @@
             <!-- Text -->
             <div class="slide-inner">
                 <h4>{% trans 'Raczkowanie' %}</h4>
-                <ul>
+                <ul class="text-list">
                     <li>{% trans 'MVP sprzedaż' %}</li>
                     <li>{% trans 'Wskazanie sukcesu' %}</li>
                 </ul>
             </div>
         </div>
 
-                <!-- Second arrow part -->
+        <!-- Second arrow part -->
         <div class="mySlides">
             <div class="small-story-arrow-container">
                 <div class="arrow-story-line-middle">
@@ -311,13 +311,13 @@
             <!-- Text -->
             <div class="slide-inner">
                 <h4>{% trans 'Chodzenie' %}</h4>
-                <ul>
+                <ul class="text-list">
                     <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
                 </ul>
             </div>
         </div>
 
-                <!-- Third arrow part -->
+        <!-- Third arrow part -->
         <div class="mySlides">
 
             <div class="small-story-arrow-container">
@@ -345,7 +345,7 @@
             <!-- Text -->
             <div class="slide-inner">
                 <h4>{% trans 'Bieg' %}</h4>
-                <ul>
+                <ul class="text-list">
                     <li>{% trans 'Dalszy rozwój produktu' %}</li>
                     <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
                     <li>{% trans 'Poprawa wydajności' %}</li>
@@ -361,6 +361,7 @@
 
     </div>
 
+    <!-- Script for the Carousel -->
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
@@ -388,188 +389,247 @@
             slides[slideIndex - 1].style.display = "block";
         }
     </script>
+<!-- ****** ****** ****** -->
 
+<!-- ****** Arrow Static Graphic - visible for BIG screens ****** -->
 
-<!-- Arrow graphic -->
-<div class="arrow-story-container">
+    <div class="arrow-story-container">
 
-    <div class="arrow-story-padding">
-        <img src=""/>
+        <!-- first -->
+        <div class="arrow-story-padding">
+            <img src=""/>
+        </div>
+
+        <div class="arrow-story-line-first">
+            <img src="/media/arrow-line.png" style="display: block; align-items: center; width: 100%; height: 119px;"/>
+        </div>
+
+        <div class="arrow-story-item arrow-story-item-first">
+            <img src="/media/arrow-first.png" style="display: block; align-items: center;"/>
+            <h4>{% trans 'Raczkowanie' %}</h4>
+            <ul>
+                <li>{% trans 'MVP sprzedaż' %}</li>
+                <li>{% trans 'Wskazanie sukcesu' %}</li>
+            </ul>
+        </div>
+
+        <!-- second -->
+        <div class="arrow-story-line">
+            <img src="/media/arrow-line.png" style="display: block; align-items: center; width: 100%; height: 119px;"/>
+        </div>
+
+        <div class="arrow-story-item arrow-story-item-second">
+            <img src="/media/arrow-second.png" style="display: block; align-items: center;"/>
+            <h4>{% trans 'Chodzenie' %}</h4>
+            <ul>
+                <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
+            </ul>
+        </div>
+
+        <div class="arrow-story-line">
+            <img src="/media/arrow-line.png" style="display: block; align-items: center; width: 100%; height: 119px;"/>
+        </div>
+
+        <!-- third -->
+        <div class="arrow-story-item arrow-story-item-third">
+            <img src="/media/arrow-third.png" style="display: block; align-items: center;"/>
+            <h4>{% trans 'Bieg' %}</h4>
+            <ul>
+                <li>{% trans 'Dalszy rozwój produktu' %}</li>
+                <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
+                <li>{% trans 'Poprawa wydajności' %}</li>
+                <li>{% trans 'Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe' %}</li>
+            </ul>
+        </div>
+
+        <div class="arrow-story-padding">
+            <img src=""/>
+        </div>
     </div>
+<!-- ****** ****** ****** -->
 
-    <div class="arrow-story-line-first">
-        <img src="/media/arrow-line.png" style="display: block; align-items: center; width: 100%; height: 119px;"/>
-    </div>
-
-    <div class="arrow-story-item arrow-story-item-first">
-        <img src="/media/arrow-first.png" style="display: block; align-items: center;"/>
-        <h4>{% trans 'Raczkowanie' %}</h4>
-        <ul>
-            <li>{% trans 'MVP sprzedaż' %}</li>
-            <li>{% trans 'Wskazanie sukcesu' %}</li>
-        </ul>
-    </div>
-
-    <div class="arrow-story-line">
-        <img src="/media/arrow-line.png" style="display: block; align-items: center; width: 100%; height: 119px;"/>
-    </div>
-
-    <div class="arrow-story-item arrow-story-item-second">
-        <img src="/media/arrow-second.png" style="display: block; align-items: center;"/>
-        <h4>{% trans 'Chodzenie' %}</h4>
-        <ul>
-            <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
-        </ul>
-    </div>
-
-    <div class="arrow-story-line">
-        <img src="/media/arrow-line.png" style="display: block; align-items: center; width: 100%; height: 119px;"/>
-    </div>
-
-    <div class="arrow-story-item arrow-story-item-third">
-        <img src="/media/arrow-third.png" style="display: block; align-items: center;"/>
-        <h4>{% trans 'Bieg' %}</h4>
-        <ul>
-            <li>{% trans 'Dalszy rozwój produktu' %}</li>
-            <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
-            <li>{% trans 'Poprawa wydajności' %}</li>
-            <li>{% trans 'Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe' %}</li>
-        </ul>
-    </div>
-
-    <div class="arrow-story-padding">
-        <img src=""/>
-    </div>
-</div>
 
 <!-- light-gray bar Costs -->
-<div class="bg-alt">
-    <div class="light-flex-container site-margin">
-        <h2 class="text-flex-item-right">
-            {% trans 'Ile to kosztuje?' %}<br/>
-            <span class="color-gray">{% trans 'Wynagrodzenie pochodzi z ' %}</span>
-            <span class="color-gold">{% trans 'utworzonego zysku' %}</span>
-        </h2>
+    <div class="bg-alt">
+        <div class="light-flex-container site-margin">
+            <h2 class="text-flex-item-right">
+                {% trans 'Ile to kosztuje?' %}<br/>
+                <span class="color-gray">{% trans 'Wynagrodzenie pochodzi z ' %}</span>
+                <span class="color-gold">{% trans 'utworzonego zysku' %}</span>
+            </h2>
+        </div>
     </div>
-</div>
 
 <!-- gold Button Contact -->
-<div class="button-gold-flex-containter">
-    <a href="mailto:cgajda@cg-consulting.pl" class="button-gold menu-button-gold">
-        {% trans 'Kontakt 1' %}
-    </a>
-</div>
+    <div class="bg-button-color">
+        <div class="site-margin">
+            <div id="contact-gold-button" class="button-gold-flex-containter">
+                <a href="mailto:cgajda@cg-consulting.pl" class="button-gold menu-button-gold">
+                    {% trans 'Kontakt 1' %}
+                </a>
+            </div>
+        </div>
+    </div>
 
 <!-- parallax Gray -->
-<div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/grayboard.jpg"></div>
+    <div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/grayboard.jpg"></div>
 
 <!-- Team -->
-<h3 class="site-margin" id="zespol"><b>|</b> {% trans ' NASZ ZESPÓŁ' %}</h3>
-<h2 class="site-margin">{% trans 'Kim jesteśmy?' %}</h2>
+    <h3 class="site-margin" id="zespol"><b>|</b> {% trans ' NASZ ZESPÓŁ' %}</h3>
+    <h2 class="site-margin">{% trans 'Kim jesteśmy?' %}</h2>
 
-<div class="basic-flex-container site-margin">
-    <div class="team-item">
-        <img class="team-img" src="/media/cyprian.jpg" height="200" width="200">
-        <h4 class="team">Cyprian</h4>
-        <hr class="gold-2px">
-        <h4 class="team-gold">CEO • BUSINESS FAIRY</h4>
-        <p class="team">
-            {% trans 'Cyprian - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
-        </p>
+    <div class="basic-flex-container site-margin">
+        <!-- Member 1 -->
+        <div class="team-item">
+            <img class="team-img" src="/media/cyprian.jpg">
+            <h4 class="team">Cyprian</h4>
+            <hr class="gold-2px">
+            <h4 class="team-gold">CEO • BUSINESS FAIRY</h4>
+            <p class="team">
+                {% trans 'Cyprian - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
+            </p>
+        </div>
+        <!-- Member 2 -->
+        <div class="team-item">
+            <img class="team-img" src="/media/joanna.jpg">
+            <h4 class="team">Joanna</h4>
+            <hr class="gold-2px">
+            <h4 class="team-gold">SENIOR SOFTWARE DEVELOPER</h4>
+            <p class="team">
+                {% trans 'Joanna -Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
+            </p>
+        </div>
+        <!-- Member 3 -->
+        <div class="team-item">
+            <img class="team-img" src="/media/aleksander.jpg">
+            <h4 class="team">Aleksander</h4>
+            <hr class="gold-2px">
+            <h4 class="team-gold">HEAD OF EMBEDDED SOFTWARE</h4>
+            <p class="team">
+                {% trans 'Aleksander - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
+            </p>
+        </div>
     </div>
-    <div class="team-item">
-        <img class="team-img" src="/media/joanna.jpg" height="200" width="200">
-        <h4 class="team">Joanna</h4>
-        <hr class="gold-2px">
-        <h4 class="team-gold">SENIOR SOFTWARE DEVELOPER</h4>
-        <p class="team">
-            {% trans 'Joanna -Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
-        </p>
-    </div>
-    <div class="team-item">
-        <img class="team-img" src="/media/aleksander.jpg" height="200" width="200">
-        <h4 class="team">Aleksander</h4>
-        <hr class="gold-2px">
-        <h4 class="team-gold">HEAD OF EMBEDDED SOFTWARE</h4>
-        <p class="team">
-            {% trans 'Aleksander - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
-        </p>
-    </div>
-</div>
 
 <!-- Our Clients -->
-<h3 class="site-margin" id="klienci"><b class="color-gold">|</b>
-    {% trans ' NASI KLIENCI' %}
-</h3>
-<h2 class="site-margin">
-                <span class="color-gold">
-                    {% trans '+7 lat ' %}
-                </span>
-    {% trans 'inspirującej działalności ' %}<br/>
-    <span class="color-gray-darker">
-                    {% trans 'z markami własnymi, firmami i projektami powierzonymi' %}
-                </span>
-</h2>
+    <h3 class="site-margin" id="klienci"><b class="color-gold">|</b>
+        {% trans ' NASI KLIENCI' %}
+    </h3>
+    <h2 class="site-margin">
+        <span class="color-gold">
+            {% trans '+7 lat ' %}
+        </span>
+        {% trans 'inspirującej działalności ' %}<br/>
+        <span class="color-gray-darker">
+            {% trans 'z markami własnymi, firmami i projektami powierzonymi' %}
+        </span>
+    </h2>
 
-<div class="clients-logos-container site-margin">
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/RestHostel.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/wisniowa_color.svg">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/amg_color.svg">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/ronin_color.svg">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/pirs_color.svg">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/MZ.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/iot_color.svg">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/kawepale.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/bluesoft.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/econsulting.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/schneider.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/oppscience.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/japonia.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/acg_models.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/boscaff.png">
-    </div>
-    <div class="client-logo-item">
-        <img class="logo-client-img" src="/media/Logos/vwv.png">
-    </div>
-</div>
 
-<hr class="gold-long">
+<!-- ****** Logos images - visible on BIG and MEDIUM screens ****** -->
+
+    <div class="clients-logos-container site-margin">
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/RestHostel.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/wisniowa_color.svg">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/amg_color.svg">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/ronin_color.svg">
+        </div>
+
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/pirs_color.svg">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/MZ.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/iot_color.svg">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/kawepale.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/bluesoft.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/econsulting.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/schneider.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/oppscience.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/japonia.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/acg_models.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/boscaff.png">
+        </div>
+        <div class="client-logo-item">
+            <img class="logo-client-img" src="/media/Logos/vwv.png">
+        </div>
+    </div>
+<!-- ****** ****** ****** -->
+
+
+<!-- ****** Logos carousel - visible on SMALL screens ****** -->
+
+    <!-- Container for the image gallery -->
+{#    <div id="carousel__slide3" class="container-slideshow">#}
+{##}
+{#        <!-- 1-2 logos -->#}
+{#        <div class="mySlides">#}
+{#            <div class="small-story-arrow-container">#}
+{#                <div class="client-logo-item">#}
+{#                    <img class="logo-client-img" src="/media/Logos/RestHostel.png">#}
+{#                </div>#}
+{#                <div class="client-logo-item">#}
+{#                    <img class="logo-client-img" src="/media/Logos/wisniowa_color.svg">#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!-- 3-4 logos -->#}
+{#        <div class="mySlides">#}
+{#            <div class="small-story-arrow-container">#}
+{#                <div class="client-logo-item">#}
+{#                    <img class="logo-client-img" src="/media/Logos/amg_color.svg">#}
+{#                </div>#}
+{#                <div class="client-logo-item">#}
+{#                    <img class="logo-client-img" src="/media/Logos/ronin_color.svg">#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{##}
+{#        <!-- Next and previous buttons -->#}
+{#        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>#}
+{#        <a class="next" onclick="plusSlides(1)">&#10095;</a>#}
+{##}
+{#    </div>#}
+
+
+<!-- ******  ******  ****** -->
+
+
+<!-- Horizontal long line -->
+    <hr class="gold-long">
 
 
 <!-- Contact Form -->
-<div id="kontakt" class="backgroud-light-grey">
-    <h3 class="site-margin"><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
-    <h2 class="site-margin">{% trans 'Kontakt 2' %}</h2>
-</div>
+    <div id="kontakt" class="backgroud-light-grey">
+        <h3 class="site-margin"><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
+        <h2 class="site-margin">{% trans 'Kontakt 2' %}</h2>
+    </div>
 <div class="bg-alt">
     <div class="contact-flex-container site-margin">
 
@@ -700,13 +760,11 @@
         <div class="footer-flex-right">
             <div class="footer-flex-item-right">
                 <a class="menu-button" href="{% url 'home' %}">
-                    <img class="v-up" src="/media/v-sign-up.png" width="26px" alt="wróć na start"/>
+                    <img class="v-up" src="/media/v-sign-up.svg" alt="wróć na start"/>
                 </a>
                 <a class="text-contact menu-button" href="{% url 'home' %}">{% trans 'Do góry' %}</a>
             </div>
         </div>
-
-        {#                <div class="filler-footer"></div>#}
 
     </footer>
 </div>
