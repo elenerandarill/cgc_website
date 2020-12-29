@@ -174,7 +174,7 @@ p.text-plain-white {
 
 .button-gold {
     font-size: 16px;
-    padding: 4px 12px;
+    padding: 5px 30px;
 }
 .button-gold-flex-containter {
     padding-top: 20px;
@@ -216,6 +216,148 @@ p.team {
     width: 158px;
 }
 
+                                /* --- Clients Logos --- */
+.logos-all-visible {
+    display: none;
+}
+.logos-carousel-visible {
+    display: block;
+}
+.clients-logos-container {
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    min-height: 130px;
+    padding: 0;
+    margin-bottom: 35px;
+}
+.client-logo-item{
+    width: auto;
+    margin: 5px;
+}
+
+.logo-client-img {
+    max-width: 120px;
+    max-height: 80px;
+
+    filter:grayscale(100%);
+}
+
+                                /* --- Contact Form --- */
+/*.contact-flex-container {*/
+/*    display: flex;*/
+/*    flex-flow: row wrap;*/
+/*    justify-content: flex-start;*/
+/*    align-items: flex-start;*/
+/*    padding-bottom: 30px;*/
+
+/*    background: #F6F6F6;*/
+/*    !*border: 1px black solid;*!*/
+/*}*/
+.contact-data-container {
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+    /*flex-grow: 1;*/
+    height: 100%;
+    margin-top: 30px;
+
+    /*border: 1px black solid;*/
+}
+
+.form-data-text {
+    font-size: 18px;
+    line-height: 21px;
+    min-width: 180px;
+    font-weight: normal;
+}
+.form-data-icon {
+    width: 20px;
+}
+.data-p-margin-bottom {
+    margin-bottom: 20px;
+}
+.h2-write-us-medium {
+    display: block;
+    margin-bottom: 20px;
+}
+/* form */
+.form-label {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+.form-field {
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px #156E7A solid;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.form-field-textarea {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px #156E7A solid;
+    font-size: 20px;
+    padding-left: 10px;
+}
+/* button 'send' */
+.button-gold-form {
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 30px;
+    margin-top: 26px;
+}
+
+                                /* --- Footer --- */
+.footer-logo-long{
+    width: 166px;
+    display: block;
+}
+.footer-logo-square{
+    display: none;
+}
+
+/* 'up' arrow */
+.text-contact {
+    font-size: 14px;
+    line-height: 20px;
+    /*min-width: 325px;*/
+}
+.text-contact-footer {
+    font-size: 16px;
+    line-height: 21px;
+    min-width: 300px;
+}
+
+.footer-flex-data {
+    display: flex;
+    flex-flow: column wrap;
+    min-width: 200px;
+}
+.footer-flex-item-right{
+    width: 60px;
+}
+
+/* contact headlines */
+.contact-h2 {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.contact-h3 {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+
+/* site map */
+.text-contact-map {
+    font-size: 16px;
+    line-height: 30px;
+    min-width: 142px;
+}
 
 
 

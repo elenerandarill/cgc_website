@@ -392,6 +392,7 @@ ul {
     display: flex;
     flex-wrap: nowrap;
 }
+/* text*/
 .slide-inner {
     max-width: 400px;
     min-height: 300px;
@@ -558,6 +559,12 @@ p.team {
 
 
                                 /* --- Clients Logos --- */
+.logos-all-visible {
+    display: block;
+}
+.logos-carousel-visible {
+    display: none;
+}
 .clients-logos-container {
     display: flex;
     flex-flow: row wrap;
@@ -798,13 +805,13 @@ img.logo-client-img:hover {
 /* logo */
 .footer-logo-square{
     width: 121px;
+    display: block;
 }
 .footer-logo-long{
-    height: 38px;
     display: none;
 }
 
-/* contact details */
+/* contact headlines */
 .contact-h2 {
     font-family: "Source Serif Pro", "Arial", serif;
     font-size: 32px;
@@ -840,9 +847,26 @@ img.logo-client-img:hover {
 
     color: black;
 }
+.text-contact-footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    min-width: 325px;
+
+    color: black;
+}
 .contact-icon {
     width: 22px;
+    max-height: 22px;
     margin-right: 10px;
+}
+.contact-p {
+    display: flex;
+    flex-flow: nowrap;
+}
+.p-waw {
+    padding-left: 38px;
+    margin-top: -12px;
 }
 
 
