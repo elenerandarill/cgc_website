@@ -1,6 +1,8 @@
 .bg-button-color {
     background: #F6F6F6;
 }
+/* Creates invisible 'virtual' element before each anchor so that browser
+   scrolls to the correct position despite a fixed-position sticky header on top of the page */
 :target::before {
   content: "";
   display: block;
