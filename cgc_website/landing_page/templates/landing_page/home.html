@@ -704,11 +704,11 @@
 
 
 <!-- Horizontal long line -->
-    <hr class="gold-long">
+    <hr id="kontakt" class="gold-long">
 
 
 <!-- Contact Form -->
-    <div id="kontakt" class="backgroud-light-grey">
+    <div class="backgroud-light-grey">
         <h3 class="site-margin"><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
         <h2 class="site-margin">{% trans 'Kontakt 2' %}</h2>
     </div>
@@ -786,7 +786,7 @@
         markers.addMarker(new OpenLayers.Marker(position));
 
         nav = new OpenLayers.Control.Navigation({'zoomWheelEnabled': false});
-        {#nav.disableZoomWheel()#}
+        // nav.disableZoomWheel()
         map.addControl(nav);
 
         var panel = new OpenLayers.Control.Zoom();

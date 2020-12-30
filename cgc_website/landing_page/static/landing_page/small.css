@@ -1,6 +1,12 @@
 .bg-button-color {
     background: #F6F6F6;
 }
+:target::before {
+  content: "";
+  display: block;
+  height: 50px; /* fixed header height*/
+  margin: -50px 0 0; /* negative fixed header height */
+}
 
 /* --- For screens up to 600px wide ---*/
 
@@ -220,6 +226,16 @@ p.team {
     height: 158px;
     width: 158px;
 }
+
+
+                                /* --- Workflow Layout --- */
+div.basic-flex-container-right {
+    min-width: 0;
+    max-width: 360px;
+    /*border: 1px red solid;*/
+}
+
+
                                 /* --- Arrow Carousel - wisible below 1081px --- */
 #carousel__slide2 {
     display: flex;
