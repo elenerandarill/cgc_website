@@ -41,13 +41,3 @@ def home(request):
     if request.method == "POST":
         send_email(request.POST)
     return render(request, "landing_page/home.html", context=context)
-
-#
-# # English version.
-# def en_home(request):
-#     if request.method == "POST":
-#         send_email(request.POST)
-#         print('******email sent2')
-#         return render(request, "landing_page/en/home.html", {})
-#     else:
-#         return render(request, "landing_page/en/home.html")
