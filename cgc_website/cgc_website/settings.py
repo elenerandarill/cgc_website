@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['CARAPI_KEY']
+SECRET_KEY = os.getenv('CARAPI_KEY', 'xxxx')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -124,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = "/app/static"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "landing_page", "media")
 MEDIA_URL = '/media/'
@@ -137,6 +138,6 @@ LOCALE_PATHS = [
 EMAIL_HOST = 'mail.cg-consulting.pl'
 EMAIL_PORT = '465'
 EMAIL_HOST_USER = 'paulina@cg-consulting.pl'
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD_CGC']
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD_CGC', "xxxxx")
 # EMAIL_USE_TLS = True
 EMAIL_USE_SSL = True
