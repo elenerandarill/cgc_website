@@ -3,7 +3,7 @@ services:
   website:
     build: .
     image: cgc-website
-    env_file: .env
+    env_file: example.env
     # environment:
     #   - CARAPI_KEY=xxx
     #   - EMAIL_HOST_PASSWORD_CGC=xxx

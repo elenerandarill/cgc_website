@@ -6,6 +6,12 @@ from django.core.mail import send_mail
 from django.urls import reverse
 from django.utils.translation import activate
 
+from .models import TeamMember, TeamMemberTrans, ClientLogo, ServicesItem, ServicesItemTrans, WorkflowItem, WorkflowItemTrans, CommonText, CommonTextTrans
+from .TeamMemberView import TeamMemberView
+from .ServicesItemView import ServicesItemView
+from .WorkflowItemView import WorkflowItemView
+from .CommonTextView import CommonTextView
+
 to_email = 'paulina@cg-consulting.pl'
 
 
@@ -27,6 +33,7 @@ def home(request):
     current_language = request.LANGUAGE_CODE
     context = {"lang_code": current_language}
 
+    # Pobierz aktualny język użytkownika
     if current_language == "pl":
         context['lang_next'] = "EN"
         activate("en")
@@ -38,6 +45,34 @@ def home(request):
         context['lang_href'] = reverse("home")
         activate("en")
 
+    # Append data into 'context' dictionary.
+
+    # ---Common text---
+    texts_items = CommonText.objects.all()
+    texts_list = CommonTextView.collect_lang_text_translations(current_language, texts_items)
+    context['services_items'] = texts_list
+
+    # ---Services items---
+    services_items = ServicesItem.objects.all()
+    items_list = ServicesItemView.collect_lang_services_items(current_language, services_items)
+    context['services_items'] = items_list
+
+    # ---Workflow 'arrow' items---
+    workflow_items = WorkflowItem.objects.all()
+    workflow_list = WorkflowItemView.collect_lang_workflow_items(current_language, workflow_items)
+    context['services_items'] = workflow_list
+
+    # ---Team members---
+    members = TeamMember.objects.all()
+    # Collect only current language translations for each member.
+    members_list = TeamMemberView.collect_lang_members(current_language, members)
+    context['team_members'] = members_list
+
+    # ---Logos---
+    logos = ClientLogo.objects.all()
+    context['client_logos'] = logos
+
     if request.method == "POST":
         send_email(request.POST)
+
     return render(request, "landing_page/home.html", context=context)
