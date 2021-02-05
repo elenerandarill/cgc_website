@@ -1,3 +1,5 @@
+from typing import Tuple, List
+
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.mail import send_mail
@@ -6,6 +8,7 @@ from django.core.mail import send_mail
 from django.urls import reverse
 from django.utils.translation import activate
 
+from .ClientLogoSmallView import ClientLogoSmallView
 from .models import TeamMember, TeamMemberTrans, ClientLogo, ServicesItem, ServicesItemTrans, WorkflowItem, WorkflowItemTrans, CommonText, CommonTextTrans
 from .TeamMemberView import TeamMemberView
 from .ServicesItemView import ServicesItemView
@@ -49,8 +52,12 @@ def home(request):
 
     # ---Common text---
     texts_items = CommonText.objects.all()
+    # list of objects in current lang.
     texts_list = CommonTextView.collect_lang_text_translations(current_language, texts_items)
-    context['services_items'] = texts_list
+    for t in texts_list:
+        # print(context)
+        # print(f"*******{t.id},{t.lang}, {t.translation}*******")
+        context[t.id] = t
 
     # ---Services items---
     services_items = ServicesItem.objects.all()
@@ -60,7 +67,9 @@ def home(request):
     # ---Workflow 'arrow' items---
     workflow_items = WorkflowItem.objects.all()
     workflow_list = WorkflowItemView.collect_lang_workflow_items(current_language, workflow_items)
-    context['services_items'] = workflow_list
+    context['workflow_item01'] = workflow_list[0]
+    context['workflow_item02'] = workflow_list[1]
+    context['workflow_item03'] = workflow_list[2]
 
     # ---Team members---
     members = TeamMember.objects.all()
@@ -70,7 +79,15 @@ def home(request):
 
     # ---Logos---
     logos = ClientLogo.objects.all()
-    context['client_logos'] = logos
+    context['clients_logos'] = logos
+
+    # ---Logos for small screens--
+    logos_small = []
+    for i in range(0, len(logos), 2):
+        logo2 = logos[i + 1] if i + 1 < len(logos) else None
+        logos_small.append(ClientLogoSmallView(logos[i], logo2))
+    context['clients_logos_small'] = logos_small
+
 
     if request.method == "POST":
         send_email(request.POST)

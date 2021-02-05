@@ -5,3 +5,8 @@ cgc_website/.idea/
 cgc_website/landing_page/__pycache__/
 cgc_website/landing_page/migrations/__pycache__/
 .env
+*.pyc
+instrukcja.afphoto
+instrukcja.png
+zmienne_spis.xlsx
+*.sqlite3

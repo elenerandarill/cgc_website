@@ -37,12 +37,12 @@
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
-        <a href="{% url 'home' %}" onclick="closeNav()">{% trans 'menu-home' %}</a>
-        <a href="{% url 'home' %}#uslugi" onclick="closeNav()">{% trans 'menu-2' %}</a>
-        <a href="{% url 'home' %}#zespol" onclick="closeNav()">{% trans 'menu-3' %}</a>
-        <a href="{% url 'home' %}" onclick="closeNav()">{% trans 'menu-4' %}</a>
-        <a href="{% url 'home' %}#kontakt" onclick="closeNav()">{% trans 'menu-5' %}</a><br/>
-        <a href="{{ lang_href }}">{% trans 'menu-lang' %}</a>
+        <a href="{% url 'home' %}" onclick="closeNav()">{{ menu_home.translation }}</a>
+        <a href="{% url 'home' %}#{{ menu_services.id }}" onclick="closeNav()">{{ menu_services.translation }}</a>
+        <a href="{% url 'home' %}#{{ menu_team.id }}" onclick="closeNav()">{{ menu_team.translation }}</a>
+        <a href="{% url 'home' %}" onclick="closeNav()">{{ menu_career.translation }}</a>
+        <a href="{% url 'home' %}#{{ menu_contact.id }}" onclick="closeNav()">{{ menu_contact.translation }}</a><br/>
+        <a href="{{ lang_href }}">{{ menu_language.translation }}</a>
     </div>
 </div>
 <!-- ******  ******  ******  -->
@@ -71,20 +71,20 @@
         </div>
             <!-- Navbar menu -->
         <div class="navbar-menu-flex-container">
-            <div class="navbar-button-flex-item"><a class="menu-button" href="#start">START</a></div>
+            <div class="navbar-button-flex-item"><a class="menu-button" href="#start">{{ menu_start.translation }}</a></div>
             <div class="navbar-button-flex-item navbar-button-middle">
-                <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'USŁUGI' %}</a>
+                <a class="menu-button" href="{% url 'home' %}#{{ menu_services.id }}">{{ menu_services.translation }}</a>
             </div>
             <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
-                                                                         href="{% url 'home' %}#jak_dzialamy">{% trans 'JAK DZIAŁAMY' %}</a>
+                                                                         href="{% url 'home' %}#{{ menu_workflow.id }}">{{ menu_workflow.translation }}</a>
             </div>
-            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#zespol">TEAM</a>
+            <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button" href="{% url 'home' %}#{{ menu_team.id }}">{{ menu_team.translation }}</a>
             </div>
             <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button"
-                                                                         href="{% url 'home' %}#klienci">{% trans 'KLIENCI' %}</a>
+                                                                         href="{% url 'home' %}#{{ menu_clients.id }}">{{ menu_clients.translation }}</a>
             </div>
             <div class="navbar-button-flex-item navbar-button-middle"><a class="menu-button-kontakt"
-                                                                         href="{% url 'home' %}#kontakt">{% trans 'KONTAKT' %}</a>
+                                                                         href="{% url 'home' %}#{{ menu_contact.id }}">{{ menu_contact.translation }}</a>
             </div>
             <div class="navbar-button-flex-item"><a class="menu-button" href="{{ lang_href }}">{{ lang_next }}</a></div>
         </div>
@@ -97,97 +97,50 @@
                 <div class="black-flex-container">
 
                     <div class="text-title black-flex-item">
-                        <h1 class="color-white">{% trans 'Inspiruj swój biznes' %}</h1>
-                        <h1 class="color-gold">{% trans 'i zaskocz konkurencję' %}</h1>
+                        <h1 class="color-white">{{ opening_headline_white.translation }}</h1>
+                        <h1 class="color-gold">{{ opening_headline_gold.translation }}</h1>
                     </div>
 
                     <div class="black-flex-item">
-                        <p class="text-plain text-plain-white ">{% trans 'Jakiekolwiek wyzwanie biznesowe czy technologiczne masz, pomożemy rozwijać Twoją firmę.' %}</p>
-                    </div>
+                        <p class="text-plain text-plain-white ">{{ opening_text.translation }}</div>
 
                     <div class="black-flex-item">
-                        <a href="#uslugi" class="button-gold menu-button-gold">{% trans 'Sprawdź ofertę' %}</a>
+                        <a href="#{{ menu_services.id }}" class="button-gold menu-button-gold">{{ opening_button.translation }}</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <a href="#uslugi">
+    <a href="#{{ menu_services.id }}">
         <img class="v-down" src="/media/v-sign-down.svg" alt="przejdź dalej">
     </a>
 
 
 <!-- Our Services - Nasze Usługi -->
-    <h3 class="site-margin" id="uslugi"><b class="color-gold">|</b>{% trans ' NASZE USŁUGI' %}</h3>
-    <h2 class="site-margin">{% trans 'Rozwiązania szyte na miarę' %}<br/> {% trans 'dla Twojego biznesu' %}</h2>
+    <h3 class="site-margin" id="{{ menu_services.id }}"><b class="color-gold">|</b> {{ chapter_services.translation }}</h3>
+    <h2 class="site-margin">{{ headline_serv_part1.translation }}<br/>{{ headline_serv_part2.translation }}</h2>
 
     <div class="basic-flex-container-services site-margin">
-        <!-- 01 -->
-        <div class="services-item">
-            <hr class="gold-4px">
-            <h4>{% trans 'Rozwój nowych produktów' %}</h4>
-            <p class="text-plain">
-                {% trans '1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
-        </div>
-
-        <!-- 02 -->
-        <div class="services-item">
-            <hr class="gold-4px">
-            <h4>{% trans 'Rozwój działalności' %}</h4>
-            <p class="text-plain">
-                {% trans '2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
-        </div>
-
-        <!-- 03 -->
-        <div class="services-item">
-            <hr class="gold-4px">
-            <h4>Outsourcing</h4>
-            <p class="text-plain">
-                {% trans '3 -  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
-        </div>
-
-        <!-- 04 -->
-        <div class="services-item">
-            <hr class="gold-4px">
-            <h4>{% trans 'Transformacja cyfrowa' %}</h4>
-            <p class="text-plain">
-                {% trans '4 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
-        </div>
-
-        <!-- 05 -->
-        <div class="services-item">
-            <hr class="gold-4px">
-            <h4>{% trans 'Usługi konsultacji' %}</h4>
-            <p class="text-plain">
-                {% trans '5 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
-        </div>
-
-        <!-- 06 -->
-        <div class="services-item">
-            <hr class="gold-4px">
-            <h4>{% trans 'Usługi IT' %}</h4>
-            <p class="text-plain">
-                {% trans '6 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-            </p>
-        </div>
-    </div>
+        {% for item in services_items %}
+            <div class="services-item">
+                <hr class="gold-4px">
+                <h4>{{ item.headline }}</h4>
+                <p class="text-plain">{{ item.content }}</p>
+            </div>
+        {% endfor %}
+     </div>
 
 <!-- parallax Blue -->
     <div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/spaceship.jpg"></div>
 
 
 <!-- Jak działamy - Our Workflow -->
-    <h3 class="site-margin" id="jak_dzialamy"><b class="color-gold">|</b>{% trans ' JAK DZIAŁAMY' %}</h3>
+    <h3 class="site-margin" id="{{ menu_workflow.id }}"><b class="color-gold">|</b> {{ chapter_workflow.translation }}</h3>
     <h2 class="site-margin">
-        {% trans 'Jak możesz usprawnić ' %}<br/>
+        {{ headline_work_part1.translation }}<br/>
         <span class="color-gold">
-            {% trans 'Swój biznes' %}
+            {{ headline_work_part2.translation }}
         </span>
     </h2>
 
@@ -199,14 +152,10 @@
                 <hr class="gold-4px">
                 <h4>
                     <span class="color-gold">1. </span>
-                    {% trans 'Nawiązanie kontaktu ' %}<br/>
-                    <span class="color-gold">
-                                    {% trans 'rozpoczęciem współpracy' %}
-                                </span>
+                    {{ work1_head_black.translation }}<br/>
+                    <span class="color-gold">{{ work1_head_gold.translation }}</span>
                 </h4>
-                <p class="text-plain">
-                    {% trans '1a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-                </p>
+                <p class="text-plain">{{ work1_content.translation }}</p>
             </div>
 
             <!-- 02 -->
@@ -214,14 +163,10 @@
                 <hr class="gold-4px">
                 <h4>
                     <span class="color-gold">2. </span>
-                    {% trans 'Propozycja ' %}
-                    <span class="color-gold">
-                                    {% trans 'działań' %}
-                                </span>
+                    {{ work2_head_black.translation }}
+                    <span class="color-gold">{{ work2_head_gold.translation }}</span>
                 </h4>
-                <p class="text-plain">
-                    {% trans '2a - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor. Sed do eiusmod tempor incididun.' %}
-                </p>
+                <p class="text-plain">{{ work2_content.translation }}</p>
             </div>
 
             <!-- 03 -->
@@ -229,14 +174,10 @@
                 <hr class="gold-4px">
                 <h4>
                     <span class="color-gold">3. </span>
-                    {% trans 'Stopniowe i sprawne ' %}
-                    <span class="color-gold">
-                                    {% trans 'wdrożenie' %}
-                                </span>
+                    {{ work3_head_black.translation }}
+                    <span class="color-gold">{{ work3_head_gold.translation }}</span>
                 </h4>
-                <p class="text-plain">
-                    {% trans 'wdrozenie_text' %}
-                </p>
+                <p class="text-plain">{{ work3_content.translation }}</p>
             </div>
         </div>
 
@@ -249,8 +190,8 @@
                     <img class="actions-side-image" src="/media/ikona_czas.svg" alt="ikona zegarka">
                     <div>
                         <p class="text-plain">
-                            <b>{% trans "Horyzont czasowy" %}</b><br/>
-                            {% trans '(punkt odniesienia) 3-4 miesiące (zależy od zakresu)' %}
+                            <b>{{ work_point1_head.translation }}</b><br/>
+                            {{ work_point1_text.translation }}
                         </p>
                     </div>
                 </div>
@@ -260,8 +201,8 @@
                     <img class="actions-side-image" src="/media/ikona_dokumenty.svg" width="55px" alt="ikona dokumentów">
                     <div>
                         <p class="text-plain">
-                            <b>{% trans 'Dokumenty' %}</b><br/>
-                            {% trans 'podpisanie NDA oraz umowy o współpracy' %}
+                            <b>{{ work_point2_head.translation }}</b><br/>
+                            {{ work_point2_text.translation }}
                         </p>
                     </div>
                 </div>
@@ -271,8 +212,8 @@
                     <img class="actions-side-image" src="/media/ikona_pieniądze.svg" width="55px">
                     <div>
                         <p class="text-plain">
-                            <b>{% trans 'Koszt' %}</b><br/>
-                            {% trans 'Finansowanie konsultacji realizowane z wypracowanego zysku' %}
+                            <b>{{ work_point3_head.translation }}</b><br/>
+                            {{ work_point3_text.translation }}
                         </p>
                     </div>
                 </div>
@@ -305,10 +246,21 @@
                 </div>
                 <!-- Text -->
                 <div class="slide-inner">
-                    <h4>{% trans 'Raczkowanie' %}</h4>
+                    <h4>{{ workflow_item01.title }}</h4>
                     <ul class="text-list">
-                        <li>{% trans 'MVP sprzedaż' %}</li>
-                        <li>{% trans 'Wskazanie sukcesu' %}</li>
+                        <li>{{ workflow_item01.point01 }}</li>
+                        {% if workflow_item01.point02 %}
+                            <li>{{ workflow_item01.point02 }}</li>
+                        {% endif %}
+                        {% if workflow_item01.point03 %}
+                            <li>{{ workflow_item01.point03 }}</li>
+                        {% endif %}
+                        {% if workflow_item01.point04 %}
+                            <li>{{ workflow_item01.point04 }}</li>
+                        {% endif %}
+                        {% if workflow_item01.point05 %}
+                            <li>{{ workflow_item01.point05 }}</li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -328,9 +280,21 @@
                 </div>
                 <!-- Text -->
                 <div class="slide-inner">
-                    <h4>{% trans 'Chodzenie' %}</h4>
+                    <h4>{{ workflow_item02.title }}</h4>
                     <ul class="text-list">
-                        <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
+                        <li>{{ workflow_item02.point01 }}</li>
+                        {% if workflow_item02.point02 %}
+                            <li>{{ workflow_item02.point02 }}</li>
+                        {% endif %}
+                        {% if workflow_item02.point03 %}
+                            <li>{{ workflow_item02.point03 }}</li>
+                        {% endif %}
+                        {% if workflow_item02.point04 %}
+                            <li>{{ workflow_item02.point04 }}</li>
+                        {% endif %}
+                        {% if workflow_item02.point05 %}
+                            <li>{{ workflow_item02.point05 }}</li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -362,12 +326,21 @@
                 </div>
                 <!-- Text -->
                 <div class="slide-inner">
-                    <h4>{% trans 'Bieg' %}</h4>
+                    <h4>{{ workflow_item03.title }}</h4>
                     <ul class="text-list">
-                        <li>{% trans 'Dalszy rozwój produktu' %}</li>
-                        <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
-                        <li>{% trans 'Poprawa wydajności' %}</li>
-                        <li>{% trans 'Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe' %}</li>
+                        <li>{{ workflow_item03.point01 }}</li>
+                        {% if workflow_item03.point02 %}
+                            <li>{{ workflow_item03.point02 }}</li>
+                        {% endif %}
+                        {% if workflow_item03.point03 %}
+                            <li>{{ workflow_item03.point03 }}</li>
+                        {% endif %}
+                        {% if workflow_item03.point04 %}
+                            <li>{{ workflow_item03.point04 }}</li>
+                        {% endif %}
+                        {% if workflow_item03.point05 %}
+                            <li>{{ workflow_item03.point05 }}</li>
+                        {% endif %}
                     </ul>
                 </div>
 
@@ -396,10 +369,21 @@
 
         <div class="arrow-story-item arrow-story-item-first">
             <img src="/media/arrow-first.png" style="display: block; align-items: center;"/>
-            <h4>{% trans 'Raczkowanie' %}</h4>
+            <h4>{{ workflow_item01.title }}</h4>
             <ul>
-                <li>{% trans 'MVP sprzedaż' %}</li>
-                <li>{% trans 'Wskazanie sukcesu' %}</li>
+                <li>{{ workflow_item01.point01 }}</li>
+                {% if workflow_item01.point02 %}
+                    <li>{{ workflow_item01.point02 }}</li>
+                {% endif %}
+                {% if workflow_item01.point03 %}
+                    <li>{{ workflow_item01.point03 }}</li>
+                {% endif %}
+                {% if workflow_item01.point04 %}
+                    <li>{{ workflow_item01.point04 }}</li>
+                {% endif %}
+                {% if workflow_item01.point05 %}
+                    <li>{{ workflow_item01.point05 }}</li>
+                {% endif %}
             </ul>
         </div>
 
@@ -410,9 +394,21 @@
 
         <div class="arrow-story-item arrow-story-item-second">
             <img src="/media/arrow-second.png" style="display: block; align-items: center;"/>
-            <h4>{% trans 'Chodzenie' %}</h4>
+            <h4>{{ workflow_item02.title }}</h4>
             <ul>
-                <li>{% trans 'Koncentracja na podstawach umożliwiających zwiększenie zysku' %}</li>
+                <li>{{ workflow_item02.point01 }}</li>
+                {% if workflow_item02.point02 %}
+                    <li>{{ workflow_item02.point02 }}</li>
+                {% endif %}
+                {% if workflow_item02.point03 %}
+                    <li>{{ workflow_item02.point03 }}</li>
+                {% endif %}
+                {% if workflow_item02.point04 %}
+                    <li>{{ workflow_item02.point04 }}</li>
+                {% endif %}
+                {% if workflow_item02.point05 %}
+                    <li>{{ workflow_item02.point05 }}</li>
+                {% endif %}
             </ul>
         </div>
 
@@ -423,12 +419,21 @@
         <!-- third -->
         <div class="arrow-story-item arrow-story-item-third">
             <img src="/media/arrow-third.png" style="display: block; align-items: center;"/>
-            <h4>{% trans 'Bieg' %}</h4>
+            <h4>{{ workflow_item03.title }}</h4>
             <ul>
-                <li>{% trans 'Dalszy rozwój produktu' %}</li>
-                <li>{% trans 'Wprowadzenie nowych rozwiązań' %}</li>
-                <li>{% trans 'Poprawa wydajności' %}</li>
-                <li>{% trans 'Wprowadzenie usprawnień w innych obszarach, aby wypracować kolejne korzyści biznesowe' %}</li>
+                <li>{{ workflow_item03.point01 }}</li>
+                {% if workflow_item03.point02 %}
+                    <li>{{ workflow_item03.point02 }}</li>
+                {% endif %}
+                {% if workflow_item03.point03 %}
+                    <li>{{ workflow_item03.point03 }}</li>
+                {% endif %}
+                {% if workflow_item03.point04 %}
+                    <li>{{ workflow_item03.point04 }}</li>
+                {% endif %}
+                {% if workflow_item03.point05 %}
+                    <li>{{ workflow_item03.point05 }}</li>
+                {% endif %}
             </ul>
         </div>
 
@@ -443,9 +448,9 @@
     <div class="bg-alt">
         <div class="light-flex-container site-margin">
             <h2 class="text-flex-item-right">
-                {% trans 'Ile to kosztuje?' %}<br/>
-                <span class="color-gray">{% trans 'Wynagrodzenie pochodzi z ' %}</span>
-                <span class="color-gold">{% trans 'utworzonego zysku' %}</span>
+                {{ headline_cost_black.translation }}<br/>
+                <span class="color-gray">{{ headline_cost_gray.translation }}</span>
+                <span class="color-gold">{{ headline_cost_gold.translation }}</span>
             </h2>
         </div>
     </div>
@@ -455,7 +460,7 @@
         <div class="site-margin">
             <div id="contact-gold-button" class="button-gold-flex-containter">
                 <a href="mailto:cgajda@cg-consulting.pl" class="button-gold menu-button-gold">
-                    {% trans 'Kontakt 1' %}
+                    {{ cost_contact_button.translation }}
                 </a>
             </div>
         </div>
@@ -465,53 +470,32 @@
     <div class="parallax-window-narrow" data-parallax="scroll" data-image-src="/media/grayboard.jpg"></div>
 
 <!-- Team -->
-    <h3 class="site-margin" id="zespol"><b>|</b> {% trans ' NASZ ZESPÓŁ' %}</h3>
-    <h2 class="site-margin">{% trans 'Kim jesteśmy?' %}</h2>
+    <h3 class="site-margin" id="{{ menu_team.id }}"><b>|</b> {{ chapter_team.translation }}</h3>
+    <h2 class="site-margin">{{ headline_team.translation }}</h2>
 
     <div class="basic-flex-container site-margin">
-        <!-- Member 1 -->
-        <div class="team-item">
-            <img class="team-img" src="/media/cyprian.jpg">
-            <h4 class="team">Cyprian</h4>
-            <hr class="gold-2px">
-            <h4 class="team-gold">CEO • BUSINESS FAIRY</h4>
-            <p class="team">
-                {% trans 'Cyprian - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
-            </p>
-        </div>
-        <!-- Member 2 -->
-        <div class="team-item">
-            <img class="team-img" src="/media/joanna.jpg">
-            <h4 class="team">Joanna</h4>
-            <hr class="gold-2px">
-            <h4 class="team-gold">SENIOR SOFTWARE DEVELOPER</h4>
-            <p class="team">
-                {% trans 'Joanna -Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
-            </p>
-        </div>
-        <!-- Member 3 -->
-        <div class="team-item">
-            <img class="team-img" src="/media/aleksander.jpg">
-            <h4 class="team">Aleksander</h4>
-            <hr class="gold-2px">
-            <h4 class="team-gold">HEAD OF EMBEDDED SOFTWARE</h4>
-            <p class="team">
-                {% trans 'Aleksander - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.' %}
-            </p>
-        </div>
+        {% for member in team_members %}
+            <div class="team-item">
+                <img class="team-img" src="{{ member.image.url }}" alt="team member photo">
+                <h4 class="team">{{ member.name }}</h4>
+                <hr class="gold-2px">
+                <h4 class="team-gold">{{ member.role }}</h4>
+                <p class="team">{{ member.description }}</p>
+            </div>
+        {% endfor %}
     </div>
 
 <!-- Our Clients -->
-    <h3 class="site-margin" id="klienci"><b class="color-gold">|</b>
-        {% trans ' NASI KLIENCI' %}
+    <h3 class="site-margin" id="{{ menu_clients.id }}"><b class="color-gold">|</b>
+        {{ chapter_clients.translation }}
     </h3>
     <h2 class="site-margin">
         <span class="color-gold">
-            {% trans '+7 lat ' %}
+            {{ headline_clients_gold.translation }}
         </span>
-        {% trans 'inspirującej działalności ' %}<br/>
+        {{ headline_clients_black.translation }}<br/>
         <span class="color-gray-darker">
-            {% trans 'z markami własnymi, firmami i projektami powierzonymi' %}
+            {{ headline_clients_gray.translation }}
         </span>
     </h2>
 
@@ -521,55 +505,11 @@
     <span class="logos-all-visible">
 
         <div class="clients-logos-container site-margin">
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/RestHostel.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/wisniowa_color.svg">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/amg_color.svg">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/ronin_color.svg">
-            </div>
-
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/pirs_color.svg">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/MZ.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/iot_color.svg">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/kawepale.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/bluesoft.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/econsulting.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/schneider.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/oppscience.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/japonia.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/acg_models.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/boscaff.png">
-            </div>
-            <div class="client-logo-item">
-                <img class="logo-client-img" src="/media/Logos/vwv.png">
-            </div>
+            {% for logo in clients_logos %}
+                <div class="client-logo-item">
+                    <img class="logo-client-img" src="{{ logo.image.url }}">
+                </div>
+            {% endfor %}
         </div>
 
     </span>
@@ -588,110 +528,20 @@
 
             <div class="carousel-items">
 
-                <!-- 1-2 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/amg_color.svg">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/wisniowa_color.svg">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3-4 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/RestHostel.png">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/ronin_color.svg">
+                {% for logos in clients_logos_small %}
+                    <div class="carousel-item">
+                        <div class="clients-logos-container">
+                            <div class="client-logo-item">
+                                <img class="logo-client-img" src="{{ logos.logo1.image.url }}">
+                            </div>
+                            <div class="client-logo-item">
+                                {% if logos.logo2.image.url %}
+                                    <img class="logo-client-img" src="{{ logos.logo2.image.url }}">
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 5-6 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/pirs_color.svg">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/MZ.png">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7-8 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/iot_color.svg">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/kawepale.png">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9-10 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/bluesoft.png">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/econsulting.png">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11-12 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/schneider.png">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/oppscience.png">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 13-14 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/japonia.png">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/acg_models.png">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 15-16 logos -->
-                <div class="carousel-item">
-
-                    <div class="clients-logos-container">
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/boscaff.png">
-                        </div>
-                        <div class="client-logo-item">
-                            <img class="logo-client-img" src="/media/Logos/vwv.png">
-                        </div>
-                    </div>
-                </div>
-
+                {% endfor %}
 
             </div>
 
@@ -704,13 +554,13 @@
 
 
 <!-- Horizontal long line -->
-    <hr id="kontakt" class="gold-long">
+    <hr id="{{ menu_contact.id }}" class="gold-long">
 
 
 <!-- Contact Form -->
     <div class="backgroud-light-grey">
-        <h3 class="site-margin"><b class="color-gold">|</b>{% trans ' KONTAKT' %}</h3>
-        <h2 class="site-margin">{% trans 'Kontakt 2' %}</h2>
+        <h3 class="site-margin"><b class="color-gold">|</b>{{ chapter_contact.translation }}</h3>
+        <h2 class="site-margin">{{ headline_contact.translation }}</h2>
     </div>
     <div class="bg-alt">
         <div class="contact-flex-container site-margin">
@@ -718,19 +568,19 @@
             <form class="form-flex-container" action="{% url 'home' %}" method="post">
                 {% csrf_token %}
                 <fieldset>
-                    <h2 class="h2-write-us-medium ">{% trans 'Kontakt 3' %}</h2>
+                    <h2 class="h2-write-us-medium ">{{ form_write_us.translation }}</h2>
                     <label class="form-label" for="sender-name">
-                        {% trans 'Imię i nazwisko' %}
+                        {{ form_name.translation}}
                     </label><br/>
                     <input class="form-field" id="sender-name" type="text" name="sender-name" value="" required
                            minlength="3" maxlength="80"><br/>
                     <label class="form-label" for="sender-email">
-                        {% trans 'Email' %}
+                        {{ form_email.translation }}
                     </label><br/>
                     <input class="form-field" id="sender-email" type="email" name="sender-email" value=""
                            required minlength="3" maxlength="254"><br/>
                     <label class="form-label" for="sender-message">
-                        {% trans 'Wiadomość' %}
+                        {{ form_message.translation }}
                     </label><br/>
                     <textarea class="form-field-textarea" name="sender-message" rows="5" cols="30" required
                               minlength="3"></textarea>
@@ -740,27 +590,26 @@
                         <input id="rodo" class="rodo-checkbox" type="checkbox" name="rodo-terms" value="True"
                                required>
 
-                        <textarea class="rodo-text" rows="5" disabled>{% trans 'RODO' %}</textarea>
+                        <textarea class="rodo-text" rows="5" disabled>{{ form_consent.translation }}</textarea>
 
                     </div>
 
                 </fieldset>
                 <div class="form-send-btn">
-                    <input class="button-gold-form" type="submit" value="{% trans 'Wyślij' %}">
+                    <input class="button-gold-form" type="submit" value="{{ form_button.translation }}">
                 </div>
 
             </form>
 
             <div class="contact-data-container">
                 <div class="form-data-text">
-                    <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> +48 601
-                        406 149</p>
+                    <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/tel.png"> {{ icon_phone.translation }}</p>
                     <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/mail.png">
-                        cgajda@cg-consulting.pl</p>
+                        {{ icon_mail.translation }}</p>
                     <p class="data-p-margin-bottom"><img class="form-data-icon" src="/media/place.png">
-                        Marszałkowska 126/134<br/>
-                        <img class="form-data-icon" src="" width="21">
-                        {% trans '00-008 Warszawa' %}
+                        {{ icon_address_p1.translation }}<br/>
+                        <img class="form-data-icon p-waw" src="" width="21">
+                        {{ icon_address_p2.translation }}
                     </p>
                 </div>
             </div>
@@ -812,24 +661,24 @@
 
                 <!-- contact info -->
                 <div class="footer-flex-item-info">
-                    <div class="contact-h2"><span class="color-gold">|</span>{% trans ' KONTAKT' %}</div>
+                    <div class="contact-h2"><span class="color-gold">|</span> {{ chapter_footer.translation }}</div>
                     <div class="text-contact-footer">
-                        <p class="contact-p"><img class="contact-icon" src="/media/tel.png" alt="numer telefonu"> +48 111 222 333</p>
-                        <p class="contact-p"><img class="contact-icon" src="/media/mail.png" alt="e-mail"> hello@ronindevelopers.com</p>
-                        <p class="contact-p"><img class="contact-icon" src="/media/place.png" alt="adres"> Marszałkowska 126/134</p>
-                        <p class="contact-p p-waw">{% trans '00-008 Warszawa' %}</p>
+                        <p class="contact-p"><img class="contact-icon" src="/media/tel.png" alt="numer telefonu"> {{ footer_phone.translation }}</p>
+                        <p class="contact-p"><img class="contact-icon" src="/media/mail.png" alt="e-mail"> {{ footer_mail.translation }}</p>
+                        <p class="contact-p"><img class="contact-icon" src="/media/place.png" alt="adres"> {{ footer_address_p1.translation }}</p>
+                        <p class="contact-p p-waw">{{ footer_address_p2.translation }}</p>
                     </div>
                 </div>
 
                 <!-- roadmap -->
                 <div class="footer-flex-item-map">
-                    <div class="contact-h3"><span class="color-gold">|</span>{% trans ' MAPA STRONY' %}</div>
+                    <div class="contact-h3"><span class="color-gold">|</span> {{ footer_webmap.translation }}</div>
                     <p class="text-contact-map">
-                        <a class="menu-button" href="{% url 'home' %}">Start</a><br/>
-                        <a class="menu-button" href="{% url 'home' %}#uslugi">{% trans 'Usługi' %}</a><br/>
-                        <a class="menu-button" href="{% url 'home' %}#zespol">{% trans 'Nasz zespół' %}</a><br/>
-                        <a class="menu-button" href="#">{% trans 'Kariera' %}</a><br/>
-                        <a class="menu-button" href="{% url 'home' %}#kontakt">{% trans 'Kontakt' %}</a><br/>
+                        <a class="menu-button" href="{% url 'home' %}">{{ footer_start.translation }}</a><br/>
+                        <a class="menu-button" href="{% url 'home' %}#{{ menu_services.id }}">{{ footer_services.translation }}</a><br/>
+                        <a class="menu-button" href="{% url 'home' %}#{{ menu_team.id }}">{{ footer_team.translation }}</a><br/>
+                        <a class="menu-button" href="#">{{ footer_career.translation }}</a><br/>
+                        <a class="menu-button" href="{% url 'home' %}#{{ menu_contact.id }}">{{ footer_contact.translation }}</a><br/>
                     </p>
                 </div>
 
@@ -841,7 +690,7 @@
                     <a class="menu-button" href="{% url 'home' %}">
                         <img class="v-up" src="/media/v-sign-up.svg" alt="wróć na start"/>
                     </a>
-                    <a class="text-contact menu-button" href="{% url 'home' %}">{% trans 'Do góry' %}</a>
+                    <a class="text-contact menu-button" href="{% url 'home' %}">{{ footer_up.translation }}</a>
                 </div>
             </div>
 
