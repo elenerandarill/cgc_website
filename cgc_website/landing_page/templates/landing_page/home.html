@@ -46,7 +46,8 @@
         <a href="{% url 'home' %}" onclick="closeNav()">{{ menu_home.translation }}</a>
         <a href="{% url 'home' %}#{{ menu_services.id }}" onclick="closeNav()">{{ menu_services.translation }}</a>
         <a href="{% url 'home' %}#{{ menu_team.id }}" onclick="closeNav()">{{ menu_team.translation }}</a>
-        <a href="{% url 'home' %}" onclick="closeNav()">{{ menu_career.translation }}</a>
+        <!-- CAREER to be changed, when it is ready, now redirects to contact form -->
+        <a href="{% url 'home' %}#{{ menu_contact.id }}" onclick="closeNav()">{{ menu_career.translation }}</a>
         <a href="{% url 'home' %}#{{ menu_contact.id }}" onclick="closeNav()">{{ menu_contact.translation }}</a><br/>
         <a href="{{ lang_href }}">{{ menu_language.translation }}</a>
     </div>
@@ -683,7 +684,8 @@
                         <a class="menu-button" href="{% url 'home' %}">{{ footer_start.translation }}</a><br/>
                         <a class="menu-button" href="{% url 'home' %}#{{ menu_services.id }}">{{ footer_services.translation }}</a><br/>
                         <a class="menu-button" href="{% url 'home' %}#{{ menu_team.id }}">{{ footer_team.translation }}</a><br/>
-                        <a class="menu-button" href="#">{{ footer_career.translation }}</a><br/>
+                        <!-- CAREER to be changed, when it is ready, now redirects to contact form -->
+                        <a class="menu-button" href="{% url 'home' %}#{{ menu_contact.id }}">{{ footer_career.translation }}</a><br/>
                         <a class="menu-button" href="{% url 'home' %}#{{ menu_contact.id }}">{{ footer_contact.translation }}</a><br/>
                     </p>
                 </div>
